@@ -1,0 +1,165 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background;
+  font-family: $font;
+}
+
+h1 {
+  font-family: $title;
+  font-size: 2.5rem;
+  color: $text;
+}
+
+h2 {
+  font-family: $subtitle;
+  font-size: 1.5rem;
+  color: $text;
+}
+
+p {
+  font-family: $font;
+  font-size: 1.2rem;
+  color: $text;
+}
+
+.logo {
+  margin: 20px;
+  height: 45px;
+  float: left;
+}
+
+// ##############################
+// ######### BIENVENUE ##########
+// ##############################
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url($fond-phone) rgba(0, 0, 0, 0.5) no-repeat center;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.link {
+  margin: 20px 0 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.connexion {
+  font-size: 14px;
+  font-family: $title;
+  border-radius: 10px;
+  padding: 15px 25px;
+  background-color: $button;
+  color: #fff;
+  text-decoration: none;
+}
+
+.inscription {
+  font-size: 14px;
+  font-family: $title;
+  border-radius: 10px;
+  padding: 15px 35px;
+  box-shadow: 0px 0px 0px 3px $text inset;
+  color: $text;
+  text-decoration: none;
+}
+
+.enter {
+  font-weight: normal;
+  font-family: $title;
+  color: $text;
+  text-decoration: underline;
+}
+
+.login,
+.signin {
+  height: 100vh;
+  background: url($fond-phone) rgba(0, 0, 0, 0.5) no-repeat center;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+// ##############################
+// ######### CONNEXION ##########
+// ##############################
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulaire {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $formulaire;
+  padding: 10px 50px 30px 50px;
+}
+
+.error {
+  color: $heart;
+  font-size: 0.8rem;
+}
+
+.title_connexion {
+  margin-bottom: 30px;
+}
+
+.text_connexion {
+  font-size: 0.9rem;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+input.form-control,
+input.form-control2 {
+  color: $text;
+  margin-top: 15px;
+  background: $input ;
+  border: $input2 solid 1.5px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.form-control2 {
+  margin-bottom: 35px;
+}
+
+.btn_connection {
+  font-family: $title;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: $button;
+}

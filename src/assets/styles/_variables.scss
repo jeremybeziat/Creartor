@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: local("Roboto-Regular"),
+    url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: local("Roboto-Medium"),
+    url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: local("Roboto-Bold"),
+    url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  // font-weight: normal;
+}
+
+// couleurs
+$formulaire: rgba(0, 0, 0, 0.8);
+$background: #272727;
+$icon: #d9d9d9;
+$input: #d9d9d910;
+$input2: #d9d9d9;
+$text: #e0e0e0;
+$footer: #454545;
+$button: #00a3ff;
+$heart: #ff6262;
+$avertissement: #ffdb1d;
+$valider: #48df60;
+
+// polices de caractères
+$font: "Roboto-Regular", sans-serif;
+$title: "Roboto-Bold", sans-serif;
+$subtitle: "Roboto-Medium", sans-serif;
+
+//fond
+$fond: "../img/fond/fond-crearteur.png";
+$fond-phone: "../img/fond/fond-crearteur-phone.png";

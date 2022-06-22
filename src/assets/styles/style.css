@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: local("Roboto-Regular"), url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: local("Roboto-Medium"), url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: local("Roboto-Bold"), url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #272727;
+  font-family: "Roboto-Regular", sans-serif;
+}
+
+h1 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 2.5rem;
+  color: #e0e0e0;
+}
+
+h2 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+}
+
+p {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+.logo {
+  margin: 20px;
+  height: 45px;
+  float: left;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../img/fond/fond-crearteur-phone.png") rgba(0, 0, 0, 0.5) no-repeat center;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.link {
+  margin: 20px 0 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.connexion {
+  font-size: 14px;
+  font-family: "Roboto-Bold", sans-serif;
+  border-radius: 10px;
+  padding: 15px 25px;
+  background-color: #00a3ff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.inscription {
+  font-size: 14px;
+  font-family: "Roboto-Bold", sans-serif;
+  border-radius: 10px;
+  padding: 15px 35px;
+  box-shadow: 0px 0px 0px 3px #e0e0e0 inset;
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.enter {
+  font-weight: normal;
+  font-family: "Roboto-Bold", sans-serif;
+  color: #e0e0e0;
+  text-decoration: underline;
+}
+
+.login,
+.signin {
+  height: 100vh;
+  background: url("../img/fond/fond-crearteur-phone.png") rgba(0, 0, 0, 0.5) no-repeat center;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulaire {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 50px 30px 50px;
+}
+
+.error {
+  color: #ff6262;
+  font-size: 0.8rem;
+}
+
+.title_connexion {
+  margin-bottom: 30px;
+}
+
+.text_connexion {
+  font-size: 0.9rem;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+input.form-control,
+input.form-control2 {
+  color: #e0e0e0;
+  margin-top: 15px;
+  background: rgba(217, 217, 217, 0.062745098);
+  border: #d9d9d9 solid 1.5px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.form-control2 {
+  margin-bottom: 35px;
+}
+
+.btn_connection {
+  font-family: "Roboto-Bold", sans-serif;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00a3ff;
+}
+
+/*# sourceMappingURL=style.css.map */
