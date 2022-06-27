@@ -9,7 +9,7 @@ function Navigation() {
   return (
     <div className="navigation">
       <ul>
-        <NavLink onClick={scrollToTop} to="/accueil"><img className="logo" src={logo} alt="" /></NavLink>
+        <NavLink onClick={scrollToTop} to="/accueil-creator"><img className="logo" src={logo} alt="" /></NavLink>
       </ul>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/Header";
+import HeaderCreator from "../components/HeaderCreator";
 import Card from "../components/Card";
 import Ball from "../assets/img/publication/ball.jpg";
 import Icon from "../assets/img/icon2.png";
@@ -20,7 +20,7 @@ import Yellow from "../assets/img/publication/yellow.jpg";
 function Home() {
   return (
     <div id="home">
-      <Header />
+      <HeaderCreator />
       <div className="home">
         <Card
           src={Ball}

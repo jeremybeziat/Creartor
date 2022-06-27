@@ -42,8 +42,7 @@ p {
 }
 
 .logo {
-  margin: 20px;
-  height: 45px;
+  height: 30px;
   float: left;
 }
 
@@ -53,7 +52,7 @@ p {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("../img/fond/fond-crearteur-phone.png") rgba(0, 0, 0, 0.5) no-repeat center;
+  background: url("../img/fond/fond-crearteur-phone.png") rgba(0, 0, 0, 0.7) no-repeat center;
   background-size: cover;
   background-blend-mode: darken;
 }
@@ -108,7 +107,7 @@ p {
 .login,
 .signin {
   height: 100vh;
-  background: url("../img/fond/fond-crearteur-phone.png") rgba(0, 0, 0, 0.5) no-repeat center;
+  background: url("../img/fond/fond-crearteur-phone.png") rgba(0, 0, 0, 0.7) no-repeat center;
   background-size: cover;
   background-blend-mode: darken;
 }
@@ -125,7 +124,7 @@ p {
   flex-direction: column;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px 50px 30px 50px;
+  padding: 25px 50px;
 }
 
 .error {
@@ -141,6 +140,10 @@ p {
   font-size: 0.9rem;
 }
 
+.password_connexion {
+  font-size: 0.9rem;
+}
+
 .form-control {
   margin-bottom: 20px;
 }
@@ -148,7 +151,7 @@ p {
 input.form-control,
 input.form-control2 {
   color: #e0e0e0;
-  margin-top: 15px;
+  margin-top: 10px;
   background: rgba(217, 217, 217, 0.062745098);
   border: #d9d9d9 solid 1.5px;
   padding: 3px;
@@ -166,6 +169,167 @@ input.form-control2 {
   border: none;
   border-radius: 5px;
   background-color: #00a3ff;
+}
+
+.header {
+  background-color: rgba(39, 39, 39, 0.8392156863);
+  backdrop-filter: blur(4px);
+  top: 0px;
+  z-index: 1000;
+  width: 100%;
+  padding: 15px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  scroll-snap-type: x proximity;
+}
+
+.animation {
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.search {
+  width: 130px;
+  background: rgba(217, 217, 217, 0.062745098);
+  border: #d9d9d9 solid 1px;
+  border-radius: 10px;
+  padding: 5px 10px 5px 1.4rem;
+  color: #e0e0e0;
+}
+
+.search2 {
+  width: 160px;
+  background: rgba(217, 217, 217, 0.062745098);
+  border: #d9d9d9 solid 1px;
+  border-radius: 10px;
+  padding: 5px 10px 5px 1.4rem;
+  color: #e0e0e0;
+}
+
+.search:focus-visible {
+  outline: none;
+}
+
+.search2:focus-visible {
+  outline: none;
+}
+
+.publish {
+  font-family: "Roboto-Medium", sans-serif;
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #00a3ff;
+}
+
+.fa-magnifying-glass {
+  color: rgba(217, 217, 217, 0.4352941176);
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.nav {
+  position: relative;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.home {
+  padding: 50px 3.5rem 0px;
+}
+
+.card {
+  margin-bottom: 45px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card_img {
+  object-fit: cover;
+  object-position: center 50%;
+  width: 100%;
+  height: 230px;
+  border-radius: 15px;
+}
+
+.card_figcaption {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  color: #e0e0e0;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(45, 45, 45, 0.7725490196);
+  backdrop-filter: blur(2px);
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.avatar_card {
+  margin: 0 10px 0 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+}
+
+.fa-heart,
+.fa-message {
+  display: flex;
+  color: #d9d9d9;
+  margin-right: 10px;
+}
+
+.icon_card {
+  display: flex;
+  flex: content;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .card_figcaption {
+    font-size: 0.9rem;
+  }
+}
+.identification {
+  font-size: 12px;
+  text-decoration: none;
+  color: #e0e0e0;
+  padding: 8px 15px;
+  box-shadow: 0px 0px 0px 1.5px #e0e0e0 inset;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
