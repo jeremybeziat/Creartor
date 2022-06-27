@@ -1,9 +1,10 @@
 import React from "react";
-import Navigation from "./Navigation";
+import NavigationCreator from "./Navigationcreator";
 import Link from "./Link";
+import Icon from "../assets/img/icon.png";
 import { useState, useCallback, useEffect } from "react";
 
-function Header() {
+function HeaderCreator() {
   const [position, setPosition] = useState("sticky");
   const [animation, setAnimation] = useState("header animation");
   const [y, setY] = useState(window.scrollY);
@@ -22,33 +23,6 @@ function Header() {
     [y]
   );
 
-  // const renderHeader = (positions) => {
-  //   if (y > window.scrollY) {
-  //     console.log("hmmm");
-  //     return <header></header>;
-  //   } else {
-  //     console.log("ah");
-  //     return (
-  //       <header className="header">
-  //         <Navigation />
-  //         <form action="formulaire">
-  //           <div className="nav">
-  //             <i className="fa-solid fa-magnifying-glass fa-xs"></i>
-  //             <input className="search" type="text" />
-  //           </div>
-  //         </form>
-  //         <Link
-  //           className="publish"
-  //           href="/publier"
-  //           target="_blank"
-  //           title="Publier"
-  //         />
-  //         <img className="icon" src={Icon} alt="icon" />
-  //       </header>
-  //     );
-  //   }
-  // };
-
   useEffect(() => {
     setY(window.scrollY);
     window.addEventListener("scroll", handleNavigation);
@@ -59,21 +33,22 @@ function Header() {
 
   return (
     <header className={animation} style={{ position: position }}>
-      <Navigation />
+      <NavigationCreator />
       <form action="formulaire">
         <div className="nav">
           <i className="fa-solid fa-magnifying-glass fa-xs"></i>
-          <input className="search2" type="text" />
+          <input className="search" type="text" />
         </div>
       </form>
       <Link
-        className="identification"
-        href="/connexion"
+        className="publish"
+        href="/publier"
         target="_blank"
-        title="S'identifier"
+        title="Publier"
       />
+      <img className="icon" src={Icon} alt="icon" />
     </header>
   );
 }
 
-export default Header;
+export default HeaderCreator;

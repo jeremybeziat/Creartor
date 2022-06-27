@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Welcome from "./pages/Welcome";
+import HomeCreator from "./pages/Homecreator"
 import Publish from "./pages/Publish";
 import "./assets/styles/style.css";
 import Connexion from "./pages/Login";
@@ -15,8 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/publier" element={<Publish />} />
-        <Route path="*" element={<Home />} />
+        <Route path="/accueil-creator" element={<HomeCreator/>} />
         <Route path="/accueil" element={<Home />} />
+        <Route path="*" element={<Home />} />
         <Route path="/connexion" element={<Connexion />} />
         <Route path="/inscription" element={<Inscription />} />
       </Routes>
