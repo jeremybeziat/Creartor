@@ -1,21 +1,27 @@
 import React from "react";
-import Link from "../components/Link";
+import { Link } from "react-router-dom";
 
-function Bienvenue() {
+function Welcome() {
   return (
     <main className="welcome">
       <h1 className="title">Bienvenue sur Créartor</h1>
       <h2 className="subtitle">
-        Créartor vous permez de partager 
-        <br></br>vos créations en toute sécurité
+        Créartor vous permez de partager <span className="br">
+        <br></br></span>vos créations en toute sécurité
       </h2>
       <div className="link">
-        <Link className="connexion" href="/connexion" title="Se connecter" />
-        <Link className="inscription" href="/inscription" title="S'inscrire" />
+        <Link className="connexion" to="/connexion">
+          Se connecter
+        </Link>
+        <Link className="inscription" to="/inscription">
+          S'inscrire
+        </Link>
       </div>
-      <Link className="enter" href="/accueil" title="Entrez sans s'identifier" />
+      <Link className="enter" to="/accueil">
+        Entrez sans s'identifier
+      </Link>
     </main>
   );
 }
 
-export default Bienvenue;
+export default Welcome;

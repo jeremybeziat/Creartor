@@ -2,6 +2,6 @@
 
 
 function authentification (req, res, next) {
-console.log("connction authentification");
+console.log("connection authentification");
 }
 export default authentification;

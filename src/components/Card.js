@@ -5,12 +5,8 @@ const Card = (props) => {
     <figure className="card">
       <img className="card_img" src={props.src} alt={props.alt} />
       <figcaption className="card_figcaption">
-        <img className="avatar_card" src={props.icone} alt={props.creator} />
-        {props.title}
-        {/* <div className="icon_card">
-          <i className="fa-regular fa-heart"></i>
-          <i className="fa-solid fa-message"></i>
-        </div> */}
+        <img className="avatar_card" src={props.icone} alt={props.createur} />
+        <p className="createur"><span className="span_createur"></span>{props.createur}</p>
       </figcaption>
     </figure>
   );
