@@ -1,17 +1,720 @@
-/* Error: expected "}".
- *     ,
- * 834 | }
- *     |  ^
- *     '
- *   src\assets\styles\style.scss 834:2  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "}".\a     \2577 \a 834 \2502  }\d\a     \2502   ^\a     \2575 \a   src\\assets\\styles\\style.scss 834:2  root stylesheet';
+@font-face {
+  font-family: "Roboto-Regular";
+  src: local("Roboto-Regular"), url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
 }
+@font-face {
+  font-family: "Roboto-Medium";
+  src: local("Roboto-Medium"), url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: local("Roboto-Bold"), url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #272727;
+  font-family: "Roboto-Regular", sans-serif;
+}
+
+h1 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 2.5rem;
+  color: #e0e0e0;
+}
+
+h2 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+}
+
+p {
+  font-family: "Roboto-Regular", sans-serif;
+  color: #e0e0e0;
+}
+
+.logo {
+  height: 30px;
+  float: left;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../img/fond/fond-crearteur-phone.png") rgba(0, 0, 0, 0.7) no-repeat center;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.title {
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.link {
+  margin: 20px 0 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.connexion {
+  font-size: 14px;
+  font-family: "Roboto-Bold", sans-serif;
+  border-radius: 10px;
+  padding: 15px 25px;
+  background-color: #00a3ff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.inscription {
+  font-size: 14px;
+  font-family: "Roboto-Bold", sans-serif;
+  border-radius: 10px;
+  padding: 15px 35px;
+  box-shadow: 0px 0px 0px 2px #e0e0e0 inset;
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.enter {
+  font-weight: normal;
+  font-family: "Roboto-Bold", sans-serif;
+  color: #e0e0e0;
+  text-decoration: underline;
+}
+
+.login,
+.signin {
+  height: 100vh;
+  background: url("../img/fond/fond-crearteur-phone.png") rgba(0, 0, 0, 0.7) no-repeat center;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.login {
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulaire {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 25px 70px;
+}
+
+.redirection {
+  margin-bottom: 30px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.redirection:focus-visible {
+  outline: none;
+}
+
+.link_connexion {
+  color: #00a3ff;
+}
+
+.error {
+  color: #ff6262;
+  font-size: 0.8rem;
+}
+
+.return {
+  position: absolute;
+  left: -60px;
+}
+
+.fa-arrow-left {
+  transition: 500ms;
+  color: #d9d9d9;
+}
+
+.fa-arrow-left:hover {
+  color: #00a3ff;
+}
+
+.title_connexion {
+  position: relative;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.text_connexion {
+  font-size: 0.9rem;
+}
+
+.password_connexion {
+  font-size: 0.9rem;
+}
+
+.form_control {
+  margin-bottom: 20px;
+}
+
+input.form_control {
+  color: #e0e0e0;
+  margin-top: 10px;
+  background: rgba(217, 217, 217, 0.062745098);
+  border: #d9d9d9 solid 1.5px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+input.form_control:focus-visible {
+  outline: 2px solid #00a3ff;
+}
+
+input.form_control:last-child {
+  margin-bottom: 35px;
+}
+
+.btn_connection {
+  font-family: "Roboto-Bold", sans-serif;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00a3ff;
+}
+
+.header {
+  background-color: rgba(39, 39, 39, 0.95);
+  backdrop-filter: blur(4px);
+  top: 0px;
+  z-index: 1000;
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.animation {
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.search {
+  width: 130px;
+  background: rgba(217, 217, 217, 0.062745098);
+  border: #d9d9d9 solid 1px;
+  border-radius: 10px;
+  padding: 5px 10px 5px 1.4rem;
+  color: #e0e0e0;
+}
+
+.search2 {
+  width: 160px;
+}
+
+.search:focus-visible {
+  outline: none;
+}
+
+.search2:focus-visible {
+  outline: none;
+}
+
+.publish {
+  font-family: "Roboto-Medium", sans-serif;
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #00a3ff;
+}
+
+.fa-magnifying-glass {
+  color: #d9d9d9;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.nav {
+  position: relative;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 0px 30px 0;
+}
+
+.card {
+  margin-bottom: 45px;
+  display: flex;
+  position: relative;
+  width: 280px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card_img {
+  object-fit: cover;
+  object-position: center 50%;
+  width: 100%;
+  height: 230px;
+  border-radius: 15px;
+}
+
+.card_figcaption {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  color: #e0e0e0;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(45, 45, 45, 0.7725490196);
+  backdrop-filter: blur(2px);
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.avatar_card {
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+}
+
+.fa-heart,
+.fa-message {
+  display: flex;
+  color: #d9d9d9;
+  margin-right: 10px;
+}
+
+.icon_card {
+  display: flex;
+  flex: content;
+  justify-content: flex-end;
+}
+
+.identification {
+  font-size: 12px;
+  text-decoration: none;
+  color: #e0e0e0;
+  padding: 8px 15px;
+  box-shadow: 0px 0px 0px 1.5px #e0e0e0 inset;
+  border-radius: 5px;
+}
+
+@media (min-width: 560px) {
+  .welcome {
+    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+  }
+  .title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .subtitle {
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin: 10px 0 30px;
+    text-align: center;
+  }
+  .link {
+    margin: 10px 0 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .connexion {
+    margin-right: 50px;
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
+  .inscription {
+    font-size: 1rem;
+    padding: 15px 25px;
+  }
+  .enter {
+    font-size: 1rem;
+  }
+  .login,
+.signin {
+    height: 100vh;
+    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+  .login {
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .formulaire {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 25px 80px;
+  }
+  .redirection {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .return {
+    left: -55px;
+  }
+  .title_connexion {
+    font-size: 3rem;
+  }
+  .text_connexion,
+.password_connexion {
+    font-size: 1rem;
+  }
+  .form_control {
+    margin-bottom: 30px;
+  }
+  input.form_control {
+    padding: 5px;
+  }
+  input.form_control:last-child {
+    margin-bottom: 40px;
+  }
+  .btn_connection {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .card {
+    margin: 10px;
+  }
+}
+@media (max-width: 599px) {
+  .logo2 {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .title {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+  .logo2 {
+    height: 25px;
+  }
+  .logo {
+    display: none;
+  }
+  .search {
+    width: 200px;
+  }
+  .publish {
+    font-size: 1rem;
+    padding: 8px 25px;
+  }
+  .icon {
+    height: 50px;
+    width: 50px;
+  }
+  .card {
+    width: 420px;
+    margin: 20px 0;
+  }
+  .card_img {
+    height: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .welcome {
+    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+  }
+  .title {
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  .subtitle {
+    font-weight: normal;
+    font-size: 0.95rem;
+    margin: 10px 0 30px;
+    text-align: center;
+  }
+  .br {
+    display: none;
+  }
+  .link {
+    margin: 20px 0 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .connexion {
+    margin-right: 50px;
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
+  .inscription {
+    font-size: 1rem;
+    padding: 15px 25px;
+  }
+  .enter {
+    font-size: 1rem;
+  }
+  .login,
+.signin {
+    height: 100vh;
+    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+  .card_figcaption {
+    font-size: 0.9rem;
+  }
+  .card {
+    width: 310px;
+    margin: 20px;
+  }
+}
+@media (min-width: 1000px) {
+  .welcome {
+    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+  }
+  .title {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .subtitle {
+    font-weight: normal;
+    font-size: 1rem;
+    margin: 10px 0 30px;
+    text-align: center;
+  }
+  .br {
+    display: none;
+  }
+  .link {
+    margin: 20px 0 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .connexion {
+    margin-right: 50px;
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
+  .inscription {
+    font-size: 1rem;
+    padding: 15px 25px;
+  }
+  .enter {
+    font-size: 1rem;
+  }
+  .login,
+.signin {
+    height: 100vh;
+    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+  .header {
+    padding: 25px 50px;
+  }
+  .logo2 {
+    height: 30px;
+  }
+  .search {
+    width: 450px;
+  }
+  .icon {
+    height: 60px;
+    width: 60px;
+  }
+  .publish {
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
+  .card {
+    width: 400px;
+    margin: 20px;
+  }
+  .card_img {
+    height: 300px;
+  }
+}
+@media (min-width: 1024px) {
+  .card {
+    width: 380px;
+    margin: 30px;
+  }
+  .card_img {
+    height: 300px;
+  }
+}
+@media (min-width: 1700px) {
+  .welcome {
+    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+  }
+  .title {
+    font-size: 5rem;
+    text-align: center;
+  }
+  .subtitle {
+    font-weight: normal;
+    font-size: 1.3rem;
+    margin: 10px 0 30px;
+    text-align: center;
+  }
+  .br {
+    display: none;
+  }
+  .link {
+    margin: 20px 0 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .connexion {
+    margin-right: 50px;
+    font-size: 1.1rem;
+    padding: 15px 25px;
+  }
+  .inscription {
+    font-size: 1.1rem;
+    padding: 15px 30px;
+  }
+  .enter {
+    font-size: 1.1rem;
+  }
+  .login,
+.signin {
+    height: 100vh;
+    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+  .card {
+    width: 360px;
+  }
+  .card_img {
+    height: 250px;
+  }
+}
+@media (min-width: 1900px) {
+  .title {
+    font-size: 5.5rem;
+    text-align: center;
+  }
+  .subtitle {
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin: 10px 0 30px;
+    text-align: center;
+  }
+  .link {
+    margin: 20px 0 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .connexion {
+    margin-right: 50px;
+    font-size: 1.1rem;
+    padding: 20px 30px;
+  }
+  .inscription {
+    font-size: 1.1rem;
+    padding: 20px 40px;
+  }
+  .enter {
+    font-size: 1.2rem;
+  }
+  .header {
+    padding: 35px 60px;
+    margin-bottom: 50px;
+  }
+  .search {
+    font-size: 1.1rem;
+    padding: 8px 2rem;
+  }
+  .fa-magnifying-glass {
+    font-size: 1rem;
+    left: 10px;
+  }
+  .identification {
+    transition: 800ms;
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
+  .identification:hover {
+    color: #fff;
+    background-color: #00a3ff;
+    transition: 500ms;
+    transform: scale(1.1);
+    box-shadow: none;
+  }
+  .card {
+    width: 410px;
+    margin: 30px 25px;
+  }
+  .card_img {
+    height: 280px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
