@@ -1,6 +1,6 @@
 import React from "react";
 import NavigationCreator from "./Navigationcreator";
-import Link from "./Link";
+import {Link} from "react-router-dom";
 import Icon from "../assets/img/icon.png";
 import { useState, useCallback, useEffect } from "react";
 
@@ -40,12 +40,9 @@ function HeaderCreator() {
           <input className="search" type="text" />
         </div>
       </form>
-      <Link
-        className="publish"
-        href="/publier"
-        target="_blank"
-        title="Publier"
-      />
+      <Link className="publish" to="/publier">
+        Publier
+      </Link>
       <img className="icon" src={Icon} alt="icon" />
     </header>
   );
