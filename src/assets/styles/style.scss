@@ -25,7 +25,6 @@ h2 {
 
 p {
   font-family: $font;
-  font-size: 1.2rem;
   color: $text;
 }
 
@@ -50,7 +49,6 @@ p {
 }
 
 .title {
-  font-weight: 700;
   font-size: 1.9rem;
   text-align: center;
 }
@@ -84,7 +82,7 @@ p {
   font-family: $title;
   border-radius: 10px;
   padding: 15px 35px;
-  box-shadow: 0px 0px 0px 3px $text inset;
+  box-shadow: 0px 0px 0px 2px $text inset;
   color: $text;
   text-decoration: none;
 }
@@ -109,6 +107,7 @@ p {
 // ##############################
 
 .login {
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,7 +119,21 @@ p {
   flex-direction: column;
   align-items: center;
   background-color: $formulaire;
-  padding: 25px 50px;
+  padding: 25px 70px;
+}
+
+.redirection {
+  margin-bottom: 30px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.redirection:focus-visible {
+  outline: none;
+}
+
+.link_connexion {
+  color: $button;
 }
 
 .error {
@@ -128,8 +141,24 @@ p {
   font-size: 0.8rem;
 }
 
+.return {
+  position: absolute;
+  left: -60px;
+}
+
+.fa-arrow-left {
+  transition: 500ms;
+  color: $icon;
+}
+
+.fa-arrow-left:hover {
+  color: $button;
+}
+
 .title_connexion {
-  margin-bottom: 30px;
+  position: relative;
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
 .text_connexion {
@@ -140,12 +169,11 @@ p {
   font-size: 0.9rem;
 }
 
-.form-control {
+.form_control {
   margin-bottom: 20px;
 }
 
-input.form-control,
-input.form-control2 {
+input.form_control {
   color: $text;
   margin-top: 10px;
   background: $input;
@@ -154,7 +182,11 @@ input.form-control2 {
   border-radius: 5px;
 }
 
-.form-control2 {
+input.form_control:focus-visible {
+  outline: 2px solid $button;
+}
+
+input.form_control:last-child {
   margin-bottom: 35px;
 }
 
@@ -171,30 +203,39 @@ input.form-control2 {
 // ########### HEADER-CREATOR ###########
 // ######################################
 
+
 .header {
-  background-color: $header;
+  background-color: rgba(39, 39, 39, 0.95);
   backdrop-filter: blur(4px);
   top: 0px;
   z-index: 1000;
   width: 100%;
-  padding: 15px 0 15px;
+  padding: 15px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .animation {
   -webkit-animation: fadeIn 0.5s;
-    animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
 }
 
 @-webkit-keyframes fadeIn {
-  from { opacity: 0; }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fadeIn {
-  from { opacity: 0; }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .search {
@@ -206,13 +247,8 @@ input.form-control2 {
   color: $text;
 }
 
-.search2{
+.search2 {
   width: 160px;
-  background: $input;
-  border: $icon solid 1px;
-  border-radius: 10px;
-  padding: 5px 10px 5px 1.4rem;
-  color: $text;
 }
 
 .search:focus-visible {
@@ -235,7 +271,7 @@ input.form-control2 {
 }
 
 .fa-magnifying-glass {
-  color: $search;
+  color: $icon;
 }
 
 .icon {
@@ -260,16 +296,18 @@ input.form-control2 {
 // ########## HOME ###########
 // ###########################
 
-
 .home {
-  padding: 50px 3.5rem 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 0px 30px 0;
 }
 
 .card {
   margin-bottom: 45px;
   display: flex;
   position: relative;
-  width: 100%;
+  width: 280px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -296,7 +334,7 @@ input.form-control2 {
 }
 
 .avatar_card {
-  margin: 0 10px 0 5px;
+  margin-right: 10px;
   width: 35px;
   height: 35px;
   border-radius: 50px;
@@ -315,12 +353,6 @@ input.form-control2 {
   justify-content: flex-end;
 }
 
-@media (max-width: 768px) {
-  .card_figcaption {
-    font-size: 0.9rem;
-  }
-}
-
 .identification {
   font-size: 12px;
   text-decoration: none;
@@ -328,4 +360,475 @@ input.form-control2 {
   padding: 8px 15px;
   box-shadow: 0px 0px 0px 1.5px $text inset;
   border-radius: 5px;
+}
+
+// ###########################
+// ########## 560 ############
+// ###########################
+
+@media (min-width: 560px) {
+  .welcome {
+    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin: 10px 0 30px;
+    text-align: center;
+  }
+
+  .link {
+    margin: 10px 0 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .connexion {
+    margin-right: 50px;
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
+
+  .inscription {
+    font-size: 1rem;
+    padding: 15px 25px;
+  }
+
+  .enter {
+    font-size: 1rem;
+  }
+
+  .login,
+  .signin {
+    height: 100vh;
+    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+
+  .login {
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .formulaire {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $formulaire;
+    padding: 25px 80px;
+  }
+
+  .redirection {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .return {
+    left: -55px;
+  }
+
+  .title_connexion {
+    font-size: 3rem;
+  }
+
+  .text_connexion,
+  .password_connexion {
+    font-size: 1rem;
+  }
+  
+  .form_control {
+    margin-bottom: 30px;
+  }
+
+  input.form_control {
+    padding: 5px;
+  }
+
+
+  input.form_control:last-child {
+    margin-bottom: 40px;
+  }
+
+  .btn_connection {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .card {
+    margin: 10px;
+  }
+}
+
+// ###########################
+// ########## 599 ############
+// ###########################
+
+@media (max-width: 599px) {
+  .logo2 {
+    display: none;
+  }
+}
+
+// ###########################
+// ########## 600 ############
+// ###########################
+
+@media (min-width: 600px) {
+  .title {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+
+  .logo2 {
+    height: 25px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .search {
+    width: 200px;
+  }
+
+  .publish {
+    font-size: 1rem;
+    padding: 8px 25px;
+  }
+
+  .icon {
+    height: 50px;
+    width: 50px;
+  }
+
+  .card {
+    width: 420px;
+    margin: 20px 0;
+  }
+
+  .card_img {
+    height: 300px;
+  }
+}
+
+// ###########################
+// ########## 768 ############
+// ###########################
+
+@media (min-width: 768px) {
+  .welcome {
+    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-weight: normal;
+    font-size: 0.95rem;
+    margin: 10px 0 30px;
+    text-align: center;
+  }
+
+  .br {
+    display: none;
+  }
+
+  .link {
+    margin: 20px 0 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .connexion {
+    margin-right: 50px;
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
+
+  .inscription {
+    font-size: 1rem;
+    padding: 15px 25px;
+  }
+
+  .enter {
+    font-size: 1rem;
+  }
+
+  .login,
+  .signin {
+    height: 100vh;
+    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+  .card_figcaption {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    width: 310px;
+    margin: 20px;
+  }
+}
+
+// ###########################
+// ########## 1000 ###########
+// ###########################
+
+@media (min-width: 1000px) {
+  .welcome {
+    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-weight: normal;
+    font-size: 1rem;
+    margin: 10px 0 30px;
+    text-align: center;
+  }
+
+  .br {
+    display: none;
+  }
+
+  .link {
+    margin: 20px 0 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .connexion {
+    margin-right: 50px;
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
+
+  .inscription {
+    font-size: 1rem;
+    padding: 15px 25px;
+  }
+
+  .enter {
+    font-size: 1rem;
+  }
+
+  .login,
+  .signin {
+    height: 100vh;
+    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+
+  .header {
+    padding: 25px 50px;
+  }
+
+  .logo2 {
+    height: 30px;
+  }
+
+  .search {
+    width: 450px;
+  }
+
+  .icon {
+    height: 60px;
+    width: 60px;
+  }
+
+  .publish {
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
+
+  .card {
+    width: 400px;
+    margin: 20px;
+  }
+
+  .card_img {
+    height: 300px;
+  }
+}
+
+// ###########################
+// ########## 1024 ###########
+// ###########################
+
+@media (min-width: 1024px) {
+  .card {
+    width: 380px;
+    margin: 30px;
+  }
+
+  .card_img {
+    height: 300px;
+  }
+}
+
+// ###########################
+// ########## 1700 ###########
+// ###########################
+
+@media (min-width: 1700px) {
+  .welcome {
+    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+  }
+
+  .title {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-weight: normal;
+    font-size: 1.3rem;
+    margin: 10px 0 30px;
+    text-align: center;
+  }
+
+  .br {
+    display: none;
+  }
+
+  .link {
+    margin: 20px 0 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .connexion {
+    margin-right: 50px;
+    font-size: 1.1rem;
+    padding: 15px 25px;
+  }
+
+  .inscription {
+    font-size: 1.1rem;
+    padding: 15px 30px;
+  }
+
+  .enter {
+    font-size: 1.1rem;
+  }
+
+  .login,
+  .signin {
+    height: 100vh;
+    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+
+  .card {
+    width: 360px;
+  }
+  .card_img {
+    height: 250px;
+  }
+}
+
+// ###########################
+// ########## 1900 ###########
+// ###########################
+
+@media (min-width: 1900px) {
+  .title {
+    font-size: 5.5rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin: 10px 0 30px;
+    text-align: center;
+  }
+
+  .link {
+    margin: 20px 0 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .connexion {
+    margin-right: 50px;
+    font-size: 1.1rem;
+    padding: 20px 30px;
+  }
+
+  .inscription {
+    font-size: 1.1rem;
+    padding: 20px 40px;
+  }
+
+  .enter {
+    font-size: 1.2rem;
+  }
+
+  .header {
+    padding: 35px 60px;
+    margin-bottom: 50px;
+  }
+
+  .search {
+    font-size: 1.1rem;
+    padding:8px 2rem;
+  }
+
+  .fa-magnifying-glass {
+    font-size: 1rem;
+    left: 10px;
+  }
+
+  .identification {
+    transition: 800ms;
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
+
+  .identification:hover {
+    color: #fff;
+    background-color: $button;
+    transition: 500ms;
+    transform: scale(1.1);
+    box-shadow: none;
+  }
+
+  .card {
+    width: 410px;
+    margin: 30px 25px;
+  }
+  .card_img {
+    height: 280px;
+  }
 }
