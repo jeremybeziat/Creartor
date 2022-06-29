@@ -41,7 +41,10 @@ function Login() {
         <p className="redirection">
           Pas encore de compte,{" "}
           <Link className="link_connexion" to="/inscription">
-           <span><br /></span> inscrivez-vous
+            <span>
+              <br />
+            </span>{" "}
+            inscrivez-vous
           </Link>
         </p>
         <div className="champ">
