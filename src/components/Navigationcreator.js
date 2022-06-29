@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/img/logo/logo-cube/creartor-logo-cube-16.png"
+import logo2 from "../assets/img/logo/logo/creartor-logo.png";
 
 function Navigation() {
   function scrollToTop() {
@@ -9,7 +10,12 @@ function Navigation() {
   return (
     <div className="navigation">
       <ul>
-        <NavLink onClick={scrollToTop} to="/accueil-creator"><img className="logo" src={logo} alt="" /></NavLink>
+      <NavLink onClick={scrollToTop} to="/accueil-creator">
+          <img className="logo" src={logo} alt="" />
+        </NavLink>
+        <NavLink onClick={scrollToTop} to="/accueil-creator">
+          <img className="logo2" src={logo2} alt="" />
+        </NavLink>
       </ul>
     </div>
   );

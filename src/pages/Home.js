@@ -1,126 +1,75 @@
 import React from "react";
 import Header from "../components/Header";
 import Card from "../components/Card";
-import Ball from "../assets/img/publication/ball.jpg";
-import Icon from "../assets/img/icon2.png";
-import Galaxi from "../assets/img/publication/galaxi.jpg";
-import Statue from "../assets/img/publication/statue.jpg";
-import Tache from "../assets/img/publication/tache.jpg";
-import Violet from "../assets/img/publication/violet.jpg";
-import Trou from "../assets/img/publication/trou_noir.jpg";
-import Cloud from "../assets/img/publication/cloud.jpg";
-import Blue from "../assets/img/publication/blue.jpg";
-import Africa from "../assets/img/publication/africa.jpg";
-import Plaque from "../assets/img/publication/plaque.jpg";
-import Orange from "../assets/img/publication/orange.jpg";
-import Design from "../assets/img/publication/design.jpg";
-import Rideau from "../assets/img/publication/rideau.jpg";
-import Yellow from "../assets/img/publication/yellow.jpg";
+import { tronquer } from "../services/global.js";
+import { useState, useEffect } from "react";
 
 function Home() {
+  const [unsplash, setUnsplash] = useState([
+    {
+      alt : "element.alt_description",
+      url: "element.urls.full",
+      username: "element.user.username",
+      pic: "element.user.profile_image.small",
+    },
+  ]);
+  const [renderHtml, setRenderHtml] = useState(
+    <div>
+      <p>image en cours de chargement</p>
+    </div>
+  );
+  useEffect(() => {
+    let response = [];
+    async function fetchData(url) {
+      try {
+        const res = await fetch(url);
+        let data = await res.json();
+        const array = data.results;
+        console.log(data.results)
+
+        array.forEach((element) => {
+          response.push({
+            alt: element.alt_description,
+            url: element.urls.small,
+            username: element.user.username,
+            pic: element.user.profile_image.small,
+          });
+        });
+        setUnsplash(response);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchData(
+      "https://api.unsplash.com/search/photos?query=Art&client_id=NtPmUNSwcDiBLX0gnKItq8QDRjnbOamSfTMqK1E-CYE&per_page=20"
+    );
+  }, []);
+
+  useEffect(() => {
+    setRenderHtml(renderCard());
+  }, [unsplash]);
+
+  function renderCard() {
+    let res = [];
+    for (let i = 0; i < unsplash.length; i++) {
+      res.push(
+        <div key={i}>
+          <Card
+            alt={unsplash[i].alt}
+            src={unsplash[i].url}
+            icone={unsplash[i].pic}
+            createur={tronquer(unsplash[i].username, 18, 700)}
+          />
+        </div>
+      );
+    }
+    return res;
+  }
+
   return (
     <div id="home">
       <Header />
-      <div className="home">
-        <Card
-          src={Ball}
-          alt="ball"
-          icone={Icon}
-          creator="icon"
-          title="rude_bear"
-        />
-        <Card
-          src={Galaxi}
-          alt="galaxi"
-          icone={Icon}
-          creator="icon"
-          title="dangerous_horse"
-        />
-        <Card
-          src={Statue}
-          alt="statue"
-          icone={Icon}
-          creator="icon"
-          title="giant_crocodile"
-        />
-        <Card
-          src={Tache}
-          alt="statue"
-          icone={Icon}
-          creator="icon"
-          title="giant_crocodile"
-        />
-        <Card
-          src={Violet}
-          alt="statue"
-          icone={Icon}
-          creator="icon"
-          title="giant_crocodile"
-        />
-        <Card
-          src={Trou}
-          alt="statue"
-          icone={Icon}
-          creator="icon"
-          title="giant_crocodile"
-        />
-        <Card
-          src={Cloud}
-          alt="statue"
-          icone={Icon}
-          creator="icon"
-          title="giant_crocodile"
-        />
-        <Card
-          src={Blue}
-          alt="statue"
-          icone={Icon}
-          creator="icon"
-          title="giant_crocodile"
-        />
-        <Card
-          src={Africa}
-          alt="statue"
-          icone={Icon}
-          creator="icon"
-          title="giant_crocodile"
-        />
-        <Card
-          src={Plaque}
-          alt="statue"
-          icone={Icon}
-          creator="icon"
-          title="giant_crocodile"
-        />
-        <Card
-          src={Orange}
-          alt="statue"
-          icone={Icon}
-          creator="icon"
-          title="giant_crocodile"
-        />
-        <Card
-          src={Design}
-          alt="statue"
-          icone={Icon}
-          creator="icon"
-          title="giant_crocodile"
-        />
-        <Card
-          src={Rideau}
-          alt="statue"
-          icone={Icon}
-          creator="icon"
-          title="giant_crocodile"
-        />
-        <Card
-          src={Yellow}
-          alt="statue"
-          icone={Icon}
-          creator="icon"
-          title="giant_crocodile"
-        />
-      </div>
+      <div className="home">{renderHtml}</div>
     </div>
   );
 }

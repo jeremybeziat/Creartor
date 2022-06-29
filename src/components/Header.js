@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "./Navigation";
-import Link from "./Link";
+import {Link} from "react-router-dom";
 import { useState, useCallback, useEffect } from "react";
 
 function Header() {
@@ -22,33 +22,6 @@ function Header() {
     [y]
   );
 
-  // const renderHeader = (positions) => {
-  //   if (y > window.scrollY) {
-  //     console.log("hmmm");
-  //     return <header></header>;
-  //   } else {
-  //     console.log("ah");
-  //     return (
-  //       <header className="header">
-  //         <Navigation />
-  //         <form action="formulaire">
-  //           <div className="nav">
-  //             <i className="fa-solid fa-magnifying-glass fa-xs"></i>
-  //             <input className="search" type="text" />
-  //           </div>
-  //         </form>
-  //         <Link
-  //           className="publish"
-  //           href="/publier"
-  //           target="_blank"
-  //           title="Publier"
-  //         />
-  //         <img className="icon" src={Icon} alt="icon" />
-  //       </header>
-  //     );
-  //   }
-  // };
-
   useEffect(() => {
     setY(window.scrollY);
     window.addEventListener("scroll", handleNavigation);
@@ -63,15 +36,12 @@ function Header() {
       <form action="formulaire">
         <div className="nav">
           <i className="fa-solid fa-magnifying-glass fa-xs"></i>
-          <input className="search2" type="text" />
+          <input className="search2 search" type="text" />
         </div>
       </form>
-      <Link
-        className="identification"
-        href="/connexion"
-        target="_blank"
-        title="S'identifier"
-      />
+      <Link className="identification" to="/connexion">
+        S'identifier
+      </Link>
     </header>
   );
 }
