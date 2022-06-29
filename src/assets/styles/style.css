@@ -181,7 +181,6 @@ input.form-control2 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  scroll-snap-type: x proximity;
 }
 
 .animation {
