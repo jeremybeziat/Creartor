@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Card from "../components/Card";
 import { tronquer } from "../services/global.js";
 import { useState, useEffect } from "react";
+import Footer from "../components/Footer";
 
 function Home() {
   const [unsplash, setUnsplash] = useState([
@@ -41,35 +42,37 @@ function Home() {
       }
     }
     fetchData(
-      "https://api.unsplash.com/search/photos?query=Art&client_id=NtPmUNSwcDiBLX0gnKItq8QDRjnbOamSfTMqK1E-CYE&per_page=20"
+      "https://api.unsplash.com/search/photos?order_by=relevant&query=Art&client_id=NtPmUNSwcDiBLX0gnKItq8QDRjnbOamSfTMqK1E-CYE&per_page=28"
     );
+
   }, []);
 
   useEffect(() => {
+    function renderCard() {
+      let res = [];
+      for (let i = 0; i < unsplash.length; i++) {
+        res.push(
+          <div key={i}>
+            <Card
+              alt={unsplash[i].alt}
+              src={unsplash[i].url}
+              icone={unsplash[i].pic}
+              createur={tronquer(unsplash[i].username, 18, 700)}
+            />
+          </div>
+        );
+      }
+      return res;
+    }
     setRenderHtml(renderCard());
   }, [unsplash]);
 
-  function renderCard() {
-    let res = [];
-    for (let i = 0; i < unsplash.length; i++) {
-      res.push(
-        <div key={i}>
-          <Card
-            alt={unsplash[i].alt}
-            src={unsplash[i].url}
-            icone={unsplash[i].pic}
-            createur={tronquer(unsplash[i].username, 18, 700)}
-          />
-        </div>
-      );
-    }
-    return res;
-  }
 
   return (
     <div id="home">
       <Header />
       <div className="home">{renderHtml}</div>
+    <Footer />
     </div>
   );
 }
