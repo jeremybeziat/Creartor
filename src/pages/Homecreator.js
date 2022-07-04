@@ -7,7 +7,7 @@ import { tronquer } from "../services/global.js";
 function Home() {
   const [unsplash, setUnsplash] = useState([
     {
-      alt : "element.alt_description",
+      alt: "element.alt_description",
       url: "element.urls.full",
       username: "element.user.username",
       pic: "element.user.profile_image.small",
@@ -25,7 +25,7 @@ function Home() {
         const res = await fetch(url);
         let data = await res.json();
         const array = data.results;
-        console.log(data.results)
+        console.log(data.results);
 
         array.forEach((element) => {
           response.push({
@@ -46,25 +46,24 @@ function Home() {
   }, []);
 
   useEffect(() => {
+    function renderCard() {
+      let res = [];
+      for (let i = 0; i < unsplash.length; i++) {
+        res.push(
+          <div key={i}>
+            <CardCreator
+              alt={unsplash[i].alt}
+              src={unsplash[i].url}
+              icone={unsplash[i].pic}
+              createur={tronquer(unsplash[i].username, 15, 700)}
+            />
+          </div>
+        );
+      }
+      return res;
+    }
     setRenderHtml(renderCard());
   }, [unsplash]);
-
-  function renderCard() {
-    let res = [];
-    for (let i = 0; i < unsplash.length; i++) {
-      res.push(
-        <div key={i}>
-          <CardCreator
-            alt={unsplash[i].alt}
-            src={unsplash[i].url}
-            icone={unsplash[i].pic}
-            createur={tronquer(unsplash[i].username, 18, 700)}
-          />
-        </div>
-      );
-    }
-    return res;
-  }
 
   return (
     <div id="home">

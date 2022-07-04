@@ -9,12 +9,15 @@ function Signin() {
           <Link className="return" to="/">
             <i className="fa-solid fa-arrow-left fa-xs"></i>
           </Link>
-          Connexion
+          Inscription
         </h1>
         <p className="redirection">
-          Pas encore de compte,{" "}
-          <Link className="link_connexion" to="/inscription">
-            inscrivez-vous
+          Vous avez un compte,{" "}
+          <Link className="link_connexion" to="/connexion">
+          <span>
+              <br />
+            </span>{" "}
+            connectez-vous
           </Link>
         </p>
         <div className="champ">
@@ -37,7 +40,7 @@ function Signin() {
           <p className="password_connexion">Mot de passe</p>
           <input type="password" className="form_control" />
         </div>
-        <input type="submit" className="btn_connection" value="Connexion" />
+        <input type="submit" className="btn_inscription" value="S'inscrire" />
       </form>
       </main>
   )

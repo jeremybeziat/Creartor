@@ -190,7 +190,8 @@ input.form_control:last-child {
   margin-bottom: 35px;
 }
 
-.btn_connection {
+.btn_connection,
+.btn_inscription {
   font-family: $title;
   color: #fff;
   padding: 10px 20px;
@@ -203,14 +204,13 @@ input.form_control:last-child {
 // ########### HEADER-CREATOR ###########
 // ######################################
 
-
 .header {
   background-color: rgba(39, 39, 39, 0.95);
   backdrop-filter: blur(4px);
   top: 0px;
   z-index: 1000;
   width: 100%;
-  padding: 15px 20px;
+  padding: 25px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -239,7 +239,7 @@ input.form_control:last-child {
 }
 
 .search {
-  width: 130px;
+  width: 100px;
   background: $input;
   border: $icon solid 1px;
   border-radius: 10px;
@@ -287,7 +287,7 @@ input.form_control:last-child {
 .fa-magnifying-glass {
   position: absolute;
   left: 7px;
-  top: 50%;
+  top: 52%;
   transform: translateY(-50%);
   z-index: 999;
 }
@@ -296,11 +296,15 @@ input.form_control:last-child {
 // ########## HOME ###########
 // ###########################
 
+.footer {
+  display: none;
+}
+
 .home {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 50px 0px 30px 0;
+  padding: 50px 0px 50px 0;
 }
 
 .card {
@@ -327,10 +331,10 @@ input.form_control:last-child {
   color: $text;
   position: absolute;
   bottom: 0;
-  background-color: #2d2d2dc5;
+  background-color: #2d2d2da8;
   backdrop-filter: blur(2px);
   width: 100%;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 15px 15px;
 }
 
 .avatar_card {
@@ -448,7 +452,7 @@ input.form_control:last-child {
   .password_connexion {
     font-size: 1rem;
   }
-  
+
   .form_control {
     margin-bottom: 30px;
   }
@@ -457,18 +461,31 @@ input.form_control:last-child {
     padding: 5px;
   }
 
-
   input.form_control:last-child {
     margin-bottom: 40px;
   }
 
-  .btn_connection {
+  .btn_connection,
+  .btn_inscription {
     font-size: 1rem;
     padding: 10px 20px;
   }
 
+  .header {
+    padding: 25px 35px;
+  }
+
+  .search {
+    width: 200px;
+  }
+
   .card {
-    margin: 10px;
+    width: 420px;
+    margin: 20px 0;
+  }
+
+  .card_img {
+    height: 300px;
   }
 }
 
@@ -487,6 +504,17 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 600px) {
+  .btn_connection,
+  .btn_inscription {
+    transition: 800ms;
+  }
+
+  .btn_connection:hover,
+  .btn_inscription:hover {
+    transform: scale(1.05);
+    transition: 800ms;
+  }
+
   .title {
     font-size: 2.6rem;
     text-align: center;
@@ -579,13 +607,48 @@ input.form_control:last-child {
     background-size: cover;
     background-blend-mode: darken;
   }
+
+  .search {
+    width: 230px;
+  }
+
   .card_figcaption {
     font-size: 0.9rem;
   }
 
   .card {
-    width: 310px;
+    width: 330px;
     margin: 20px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .link_footer {
+    font-size: 0.9rem;
+    color: $text;
+    text-decoration: none;
+    margin: 0px 10px;
+    transition: 800ms;
+  }
+
+  .link_footer:hover {
+    transform: scale(1.05);
+    transition: 800ms;
+  }
+
+  .footer {
+    background-color: $footer;
+    padding: 50px 0 20px 0;
+  }
+
+  .copyright {
+    color: $icon;
+    font-size: 0.8rem;
+    text-align: center;
   }
 }
 
@@ -645,10 +708,6 @@ input.form_control:last-child {
     background-blend-mode: darken;
   }
 
-  .header {
-    padding: 25px 50px;
-  }
-
   .logo2 {
     height: 30px;
   }
@@ -675,6 +734,35 @@ input.form_control:last-child {
   .card_img {
     height: 300px;
   }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .link_footer {
+    color: $text;
+    text-decoration: none;
+    margin: 0px 20px;
+    transition: 800ms;
+  }
+
+  .link_footer:hover {
+    transform: scale(1.05);
+    transition: 800ms;
+  }
+
+  .footer {
+    background-color: $footer;
+    padding: 50px 0 20px 0;
+  }
+
+  .copyright {
+    color: $icon;
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
 
 // ###########################
@@ -682,13 +770,34 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 1024px) {
-  .card {
-    width: 380px;
-    margin: 30px;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
   }
 
-  .card_img {
-    height: 300px;
+  .link_footer {
+    color: $text;
+    text-decoration: none;
+    margin: 0px 20px;
+    transition: 800ms;
+  }
+
+  .link_footer:hover {
+    transform: scale(1.05);
+    transition: 800ms;
+  }
+
+  .footer {
+    background-color: $footer;
+    padding: 50px 0 20px 0;
+  }
+
+  .copyright {
+    color: $icon;
+    font-size: 0.9rem;
+    text-align: center;
   }
 }
 
@@ -754,6 +863,35 @@ input.form_control:last-child {
   .card_img {
     height: 250px;
   }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .link_footer {
+    color: $text;
+    text-decoration: none;
+    margin: 0px 30px;
+    transition: 800ms;
+  }
+
+  .link_footer:hover {
+    transform: scale(1.05);
+    transition: 800ms;
+  }
+
+  .footer {
+    background-color: $footer;
+    padding: 50px 0 20px 0;
+  }
+
+  .copyright {
+    color: $icon;
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
 
 // ###########################
@@ -802,7 +940,7 @@ input.form_control:last-child {
 
   .search {
     font-size: 1.1rem;
-    padding:8px 2rem;
+    padding: 8px 2rem;
   }
 
   .fa-magnifying-glass {
@@ -811,7 +949,7 @@ input.form_control:last-child {
   }
 
   .identification {
-    transition: 800ms;
+    transition: 300ms;
     font-size: 1rem;
     padding: 10px 30px;
   }
@@ -819,16 +957,49 @@ input.form_control:last-child {
   .identification:hover {
     color: #fff;
     background-color: $button;
-    transition: 500ms;
+    transition: 300ms;
     transform: scale(1.1);
     box-shadow: none;
   }
 
   .card {
     width: 410px;
-    margin: 30px 25px;
+    margin: 25px 25px;
   }
   .card_img {
     height: 280px;
+  }
+
+  .createur {
+    font-size: 1.1rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .link_footer {
+    color: $text;
+    text-decoration: none;
+    margin: 0px 30px;
+    transition: 800ms;
+  }
+
+  .link_footer:hover {
+    transform: scale(1.05);
+    transition: 800ms;
+  }
+
+  .footer {
+    background-color: $footer;
+    padding: 50px 0 20px 0;
+  }
+
+  .copyright {
+    color: $icon;
+    font-size: 0.9rem;
+    text-align: center;
   }
 }

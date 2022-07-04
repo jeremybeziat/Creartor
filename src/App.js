@@ -10,6 +10,7 @@ import "../src/assets/fonts/Roboto/Roboto-Regular.ttf"
 import "../src/assets/fonts/Roboto/Roboto-Bold.ttf"
 import "../src/assets/fonts/Roboto/Roboto-Medium.ttf"
 
+
 function App() {
   return (
     <BrowserRouter>
