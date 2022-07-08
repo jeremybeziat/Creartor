@@ -51,7 +51,7 @@ p {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("../img/fond/fond-crearteur-phone.png") rgba(0, 0, 0, 0.7) no-repeat center;
+  background: url("../img/fond/fond-crearteur-phone.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
   background-size: cover;
   background-blend-mode: darken;
 }
@@ -105,7 +105,7 @@ p {
 .login,
 .signin {
   height: 100vh;
-  background: url("../img/fond/fond-crearteur-phone.png") rgba(0, 0, 0, 0.7) no-repeat center;
+  background: url("../img/fond/fond-crearteur-phone.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
   background-size: cover;
   background-blend-mode: darken;
 }
@@ -210,7 +210,7 @@ input.form_control:last-child {
   top: 0px;
   z-index: 1000;
   width: 100%;
-  padding: 25px 15px;
+  padding: 25px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -312,24 +312,25 @@ input.form_control:last-child {
 }
 
 .card_img {
+  box-shadow: 0px 0px 15px 0px rgba(23, 23, 23, 0.2274509804);
   object-fit: cover;
   object-position: center 50%;
   width: 100%;
-  height: 230px;
-  border-radius: 15px;
+  height: 210px;
+  border-radius: 10px;
 }
 
 .card_figcaption {
+  position: absolute;
   display: flex;
   align-items: center;
   padding: 10px 10px;
   color: #e0e0e0;
-  position: absolute;
   bottom: 0;
   background-color: rgba(45, 45, 45, 0.6588235294);
   backdrop-filter: blur(2px);
   width: 100%;
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 10px 10px;
 }
 
 .avatar_card {
@@ -361,9 +362,33 @@ input.form_control:last-child {
   border-radius: 5px;
 }
 
+@media (min-width: 400px) {
+  .card {
+    width: 330px;
+  }
+  .card_img {
+    height: 240px;
+  }
+}
+@media (min-width: 450px) {
+  .card {
+    width: 350px;
+  }
+  .card_img {
+    height: 250px;
+  }
+}
+@media (min-width: 500px) {
+  .card {
+    width: 400px;
+  }
+  .card_img {
+    height: 280px;
+  }
+}
 @media (min-width: 560px) {
   .welcome {
-    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
     background-size: cover;
   }
   .title {
@@ -397,7 +422,7 @@ input.form_control:last-child {
   .login,
 .signin {
     height: 100vh;
-    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
     background-size: cover;
     background-blend-mode: darken;
   }
@@ -495,16 +520,25 @@ input.form_control:last-child {
     width: 50px;
   }
   .card {
-    width: 420px;
+    width: 470px;
     margin: 20px 0;
   }
   .card_img {
     height: 300px;
   }
 }
+@media (min-width: 740px) {
+  .card {
+    width: 300px;
+    margin: 20px;
+  }
+  .card_img {
+    height: 280px;
+  }
+}
 @media (min-width: 768px) {
   .welcome {
-    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
     background-size: cover;
   }
   .title {
@@ -541,19 +575,19 @@ input.form_control:last-child {
   .login,
 .signin {
     height: 100vh;
-    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
     background-size: cover;
     background-blend-mode: darken;
   }
   .search {
     width: 230px;
   }
-  .card_figcaption {
-    font-size: 0.9rem;
-  }
   .card {
-    width: 330px;
+    width: 320px;
     margin: 20px;
+  }
+  .card_img {
+    height: 280px;
   }
   .container {
     display: flex;
@@ -581,9 +615,18 @@ input.form_control:last-child {
     text-align: center;
   }
 }
+@media (min-width: 830px) {
+  .card {
+    width: 350px;
+    margin: 20px;
+  }
+  .card_img {
+    height: 280px;
+  }
+}
 @media (min-width: 1000px) {
   .welcome {
-    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
     background-size: cover;
   }
   .title {
@@ -620,7 +663,7 @@ input.form_control:last-child {
   .login,
 .signin {
     height: 100vh;
-    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
     background-size: cover;
     background-blend-mode: darken;
   }
@@ -637,6 +680,9 @@ input.form_control:last-child {
   .publish {
     font-size: 1rem;
     padding: 10px 30px;
+  }
+  .home {
+    padding-top: 80px;
   }
   .card {
     width: 400px;
@@ -696,9 +742,27 @@ input.form_control:last-child {
     text-align: center;
   }
 }
+@media (min-width: 1200px) {
+  .card {
+    width: 420px;
+    margin: 30px;
+  }
+  .card_img {
+    height: 270px;
+  }
+}
+@media (min-width: 1600px) {
+  .card {
+    width: 450px;
+    margin: 30px;
+  }
+  .card_img {
+    height: 280px;
+  }
+}
 @media (min-width: 1700px) {
   .welcome {
-    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
     background-size: cover;
   }
   .title {
@@ -735,15 +799,15 @@ input.form_control:last-child {
   .login,
 .signin {
     height: 100vh;
-    background: url("../img/fond/fond-crearteur.png") rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
     background-size: cover;
     background-blend-mode: darken;
   }
   .card {
-    width: 360px;
+    width: 480px;
   }
   .card_img {
-    height: 250px;
+    height: 300px;
   }
   .container {
     display: flex;
@@ -824,11 +888,11 @@ input.form_control:last-child {
     box-shadow: none;
   }
   .card {
-    width: 410px;
-    margin: 25px 25px;
+    width: 450px;
+    margin: 30px;
   }
   .card_img {
-    height: 280px;
+    height: 300px;
   }
   .createur {
     font-size: 1.1rem;
