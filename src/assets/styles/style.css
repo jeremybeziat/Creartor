@@ -378,6 +378,14 @@ input.form_control:last-child {
     height: 250px;
   }
 }
+@media (min-width: 480px) {
+  .card {
+    width: 380px;
+  }
+  .card_img {
+    height: 260px;
+  }
+}
 @media (min-width: 500px) {
   .card {
     width: 400px;
@@ -606,6 +614,7 @@ input.form_control:last-child {
     transition: 800ms;
   }
   .footer {
+    display: block;
     background-color: #454545;
     padding: 50px 0 20px 0;
   }
