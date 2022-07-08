@@ -614,6 +614,7 @@ input.form_control:last-child {
     transition: 800ms;
   }
   .footer {
+    display: block;
     background-color: #454545;
     padding: 50px 0 20px 0;
   }
