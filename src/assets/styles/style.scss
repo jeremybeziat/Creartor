@@ -613,7 +613,6 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 740px) {
-
   .card {
     width: 300px;
     margin: 20px;
@@ -623,7 +622,6 @@ input.form_control:last-child {
     height: 280px;
   }
 }
-
 
 // ###########################
 // ########## 768 ############
@@ -701,7 +699,7 @@ input.form_control:last-child {
   .container {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 65px;
   }
 
   .link_footer {
@@ -718,10 +716,9 @@ input.form_control:last-child {
   }
 
   .footer {
-
     display: block;
     background-color: $footer;
-    padding: 50px 0 20px 0;
+    padding: 50px 20px;
   }
 
   .copyright {
@@ -732,7 +729,6 @@ input.form_control:last-child {
 }
 
 @media (min-width: 830px) {
-
   .card {
     width: 350px;
     margin: 20px;
@@ -830,69 +826,12 @@ input.form_control:last-child {
     height: 300px;
   }
 
-  .container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-
   .link_footer {
-    color: $text;
-    text-decoration: none;
-    margin: 0px 20px;
-    transition: 800ms;
+    margin: 0 20px;
   }
 
   .link_footer:hover {
-    transform: scale(1.05);
-    transition: 800ms;
-  }
-
-  .footer {
-    background-color: $footer;
-    padding: 50px 0 20px 0;
-  }
-
-  .copyright {
-    color: $icon;
-    font-size: 0.9rem;
-    text-align: center;
-  }
-}
-
-// ###########################
-// ########## 1024 ###########
-// ###########################
-
-@media (min-width: 1024px) {
-
-  .container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-
-  .link_footer {
-    color: $text;
-    text-decoration: none;
-    margin: 0px 20px;
-    transition: 800ms;
-  }
-
-  .link_footer:hover {
-    transform: scale(1.05);
-    transition: 800ms;
-  }
-
-  .footer {
-    background-color: $footer;
-    padding: 50px 0 20px 0;
-  }
-
-  .copyright {
-    color: $icon;
-    font-size: 0.9rem;
-    text-align: center;
+    transform: scale(1.08);
   }
 }
 
@@ -901,7 +840,6 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 1200px) {
-
   .card {
     width: 420px;
     margin: 30px;
@@ -910,6 +848,11 @@ input.form_control:last-child {
   .card_img {
     height: 270px;
   }
+
+  .link_footer {
+    font-size: 1rem;
+    margin: 0 25px;
+  }
 }
 
 // ###########################
@@ -917,14 +860,13 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 1600px) {
-
   .card {
-    width: 450px;
+    width: 330px;
     margin: 30px;
   }
 
   .card_img {
-    height: 280px;
+    height: 230px;
   }
 }
 
@@ -985,39 +927,10 @@ input.form_control:last-child {
   }
 
   .card {
-    width: 480px;
+    width: 350px;
   }
   .card_img {
-    height: 300px;
-  }
-
-  .container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-
-  .link_footer {
-    color: $text;
-    text-decoration: none;
-    margin: 0px 30px;
-    transition: 800ms;
-  }
-
-  .link_footer:hover {
-    transform: scale(1.05);
-    transition: 800ms;
-  }
-
-  .footer {
-    background-color: $footer;
-    padding: 50px 0 20px 0;
-  }
-
-  .copyright {
-    color: $icon;
-    font-size: 0.9rem;
-    text-align: center;
+    height: 260px;
   }
 }
 
@@ -1090,43 +1003,34 @@ input.form_control:last-child {
   }
 
   .card {
-    width: 450px;
-    margin: 30px;
+    width: 380px;
+    margin: 35px;
   }
   .card_img {
-    height: 300px;
+    height: 280px;
   }
 
   .createur {
     font-size: 1.1rem;
   }
 
-  .container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+  .link_footer {
+    font-size: 1.1rem;
+    margin: 0 35px;
+  }
+}
+
+@media (min-width: 2100px) {
+  .card {
+    width: 430px;
   }
 
   .link_footer {
-    color: $text;
-    text-decoration: none;
-    margin: 0px 30px;
-    transition: 800ms;
-  }
-
-  .link_footer:hover {
-    transform: scale(1.05);
-    transition: 800ms;
-  }
-
-  .footer {
-    background-color: $footer;
-    padding: 50px 0 20px 0;
+    font-size: 1.2rem;
+    margin: 0 40px;
   }
 
   .copyright {
-    color: $icon;
-    font-size: 0.9rem;
-    text-align: center;
+    font-size: 1rem;
   }
 }
