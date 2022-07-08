@@ -926,6 +926,10 @@ input.form_control:last-child {
   .card_img {
     height: 280px;
   }
+
+  .link_footer {
+    font-size: 1rem;
+  }
 }
 
 // ###########################
@@ -1090,7 +1094,7 @@ input.form_control:last-child {
   }
 
   .card {
-    width: 450px;
+    width: 400px;
     margin: 30px;
   }
   .card_img {
@@ -1108,25 +1112,17 @@ input.form_control:last-child {
   }
 
   .link_footer {
-    color: $text;
-    text-decoration: none;
-    margin: 0px 30px;
-    transition: 800ms;
-  }
-
-  .link_footer:hover {
-    transform: scale(1.05);
-    transition: 800ms;
+    font-size: 1.1rem;
   }
 
   .footer {
     background-color: $footer;
     padding: 50px 0 20px 0;
   }
+}
 
-  .copyright {
-    color: $icon;
-    font-size: 0.9rem;
-    text-align: center;
+@media (min-width:2100px ) {
+  .card {
+    width: 450px;
   }
 }
