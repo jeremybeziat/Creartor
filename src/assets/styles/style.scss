@@ -210,7 +210,7 @@ input.form_control:last-child {
   top: 0px;
   z-index: 1000;
   width: 100%;
-  padding: 25px 15px;
+  padding: 25px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -317,24 +317,25 @@ input.form_control:last-child {
 }
 
 .card_img {
+  box-shadow: 0px 0px 15px 0px #1717173a;
   object-fit: cover;
   object-position: center 50%;
   width: 100%;
-  height: 230px;
-  border-radius: 15px;
+  height: 210px;
+  border-radius: 10px;
 }
 
 .card_figcaption {
+  position: absolute;
   display: flex;
   align-items: center;
   padding: 10px 10px;
   color: $text;
-  position: absolute;
   bottom: 0;
   background-color: #2d2d2da8;
   backdrop-filter: blur(2px);
   width: 100%;
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 10px 10px;
 }
 
 .avatar_card {
@@ -364,6 +365,48 @@ input.form_control:last-child {
   padding: 8px 15px;
   box-shadow: 0px 0px 0px 1.5px $text inset;
   border-radius: 5px;
+}
+
+// ###########################
+// ########## 400 ############
+// ###########################
+
+@media (min-width: 400px) {
+  .card {
+    width: 330px;
+  }
+
+  .card_img {
+    height: 240px;
+  }
+}
+
+// ###########################
+// ########## 450 ############
+// ###########################
+
+@media (min-width: 450px) {
+  .card {
+    width: 350px;
+  }
+
+  .card_img {
+    height: 250px;
+  }
+}
+
+// ###########################
+// ########## 500 ############
+// ###########################
+
+@media (min-width: 500px) {
+  .card {
+    width: 400px;
+  }
+
+  .card_img {
+    height: 280px;
+  }
 }
 
 // ###########################
@@ -543,7 +586,7 @@ input.form_control:last-child {
   }
 
   .card {
-    width: 420px;
+    width: 470px;
     margin: 20px 0;
   }
 
@@ -551,6 +594,22 @@ input.form_control:last-child {
     height: 300px;
   }
 }
+// ###########################
+// ########## 740 ############
+// ###########################
+
+@media (min-width: 740px) {
+
+  .card {
+    width: 300px;
+    margin: 20px;
+  }
+
+  .card_img {
+    height: 280px;
+  }
+}
+
 
 // ###########################
 // ########## 768 ############
@@ -612,14 +671,18 @@ input.form_control:last-child {
     width: 230px;
   }
 
-  .card_figcaption {
-    font-size: 0.9rem;
-  }
-
   .card {
-    width: 330px;
+    width: 320px;
     margin: 20px;
   }
+
+  .card_img {
+    height: 280px;
+  }
+
+  // .card_figcaption {
+  //   font-size: 0.9rem;
+  // }
 
   .container {
     display: flex;
@@ -649,6 +712,18 @@ input.form_control:last-child {
     color: $icon;
     font-size: 0.8rem;
     text-align: center;
+  }
+}
+
+@media (min-width: 830px) {
+
+  .card {
+    width: 350px;
+    margin: 20px;
+  }
+
+  .card_img {
+    height: 280px;
   }
 }
 
@@ -724,6 +799,10 @@ input.form_control:last-child {
   .publish {
     font-size: 1rem;
     padding: 10px 30px;
+  }
+
+  .home {
+    padding-top: 80px;
   }
 
   .card {
@@ -802,6 +881,38 @@ input.form_control:last-child {
 }
 
 // ###########################
+// ########## 1200 ###########
+// ###########################
+
+@media (min-width: 1200px) {
+
+  .card {
+    width: 420px;
+    margin: 30px;
+  }
+
+  .card_img {
+    height: 270px;
+  }
+}
+
+// ###########################
+// ########## 1600 ###########
+// ###########################
+
+@media (min-width: 1600px) {
+
+  .card {
+    width: 450px;
+    margin: 30px;
+  }
+
+  .card_img {
+    height: 280px;
+  }
+}
+
+// ###########################
 // ########## 1700 ###########
 // ###########################
 
@@ -858,10 +969,10 @@ input.form_control:last-child {
   }
 
   .card {
-    width: 360px;
+    width: 480px;
   }
   .card_img {
-    height: 250px;
+    height: 300px;
   }
 
   .container {
@@ -963,11 +1074,11 @@ input.form_control:last-child {
   }
 
   .card {
-    width: 410px;
-    margin: 25px 25px;
+    width: 450px;
+    margin: 30px;
   }
   .card_img {
-    height: 280px;
+    height: 300px;
   }
 
   .createur {
