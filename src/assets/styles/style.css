@@ -51,7 +51,7 @@ p {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("../img/fond/fond-crearteur-phone.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
+  background: url("../img/fond/fond-crearteur-phone.webp") rgba(0, 0, 0, 0.8) no-repeat center;
   background-size: cover;
   background-blend-mode: darken;
 }
@@ -99,13 +99,13 @@ p {
   font-weight: normal;
   font-family: "Roboto-Bold", sans-serif;
   color: #e0e0e0;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .login,
 .signin {
   height: 100vh;
-  background: url("../img/fond/fond-crearteur-phone.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
+  background: url("../img/fond/fond-crearteur-phone.webp") rgba(0, 0, 0, 0.7) no-repeat center;
   background-size: cover;
   background-blend-mode: darken;
 }
@@ -366,6 +366,7 @@ input.form_control:last-child {
   .card {
     width: 330px;
   }
+
   .card_img {
     height: 240px;
   }
@@ -374,6 +375,7 @@ input.form_control:last-child {
   .card {
     width: 350px;
   }
+
   .card_img {
     height: 250px;
   }
@@ -382,6 +384,7 @@ input.form_control:last-child {
   .card {
     width: 380px;
   }
+
   .card_img {
     height: 260px;
   }
@@ -390,56 +393,66 @@ input.form_control:last-child {
   .card {
     width: 400px;
   }
+
   .card_img {
     height: 280px;
   }
 }
 @media (min-width: 560px) {
   .welcome {
-    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url("../img/fond/fond-crearteur.webp") rgba(0, 0, 0, 0.8) no-repeat center;
     background-size: cover;
   }
+
   .title {
     font-size: 2.4rem;
     text-align: center;
   }
+
   .subtitle {
     font-weight: normal;
     font-size: 1.2rem;
     margin: 10px 0 30px;
     text-align: center;
   }
+
   .link {
     margin: 10px 0 30px 0;
     width: 100%;
     display: flex;
     justify-content: center;
   }
+
   .connexion {
     margin-right: 50px;
     font-size: 1rem;
     padding: 15px 20px;
   }
+
   .inscription {
     font-size: 1rem;
     padding: 15px 25px;
   }
+
   .enter {
     font-size: 1rem;
   }
+
   .login,
 .signin {
     height: 100vh;
-    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url("../img/fond/fond-crearteur.webp") rgba(0, 0, 0, 0.7) no-repeat center;
     background-size: cover;
     background-blend-mode: darken;
   }
+
   .login {
     padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .formulaire {
     border-radius: 5px;
     display: flex;
@@ -448,45 +461,57 @@ input.form_control:last-child {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 25px 80px;
   }
+
   .redirection {
     margin-bottom: 30px;
     font-size: 1.1rem;
     text-align: center;
   }
+
   .return {
     left: -55px;
   }
+
   .title_connexion {
     font-size: 3rem;
   }
+
   .text_connexion,
 .password_connexion {
     font-size: 1rem;
   }
+
   .form_control {
     margin-bottom: 30px;
   }
+
   input.form_control {
     padding: 5px;
   }
+
   input.form_control:last-child {
     margin-bottom: 40px;
   }
+
   .btn_connection,
 .btn_inscription {
     font-size: 1rem;
     padding: 10px 20px;
   }
+
   .header {
     padding: 25px 35px;
   }
+
   .search {
     width: 200px;
   }
+
   .card {
     width: 420px;
     margin: 20px 0;
   }
+
   .card_img {
     height: 300px;
   }
@@ -501,36 +526,45 @@ input.form_control:last-child {
 .btn_inscription {
     transition: 800ms;
   }
+
   .btn_connection:hover,
 .btn_inscription:hover {
     transform: scale(1.05);
     transition: 800ms;
   }
+
   .title {
     font-size: 2.6rem;
     text-align: center;
   }
+
   .logo2 {
     height: 25px;
   }
+
   .logo {
     display: none;
   }
+
   .search {
     width: 200px;
   }
+
   .publish {
     font-size: 1rem;
     padding: 8px 25px;
   }
+
   .icon {
     height: 50px;
     width: 50px;
   }
+
   .card {
     width: 470px;
     margin: 20px 0;
   }
+
   .card_img {
     height: 300px;
   }
@@ -540,68 +574,82 @@ input.form_control:last-child {
     width: 300px;
     margin: 20px;
   }
+
   .card_img {
     height: 280px;
   }
 }
 @media (min-width: 768px) {
   .welcome {
-    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url("../img/fond/fond-crearteur.webp") rgba(0, 0, 0, 0.8) no-repeat center;
     background-size: cover;
   }
+
   .title {
     font-size: 3.2rem;
     text-align: center;
   }
+
   .subtitle {
     font-weight: normal;
     font-size: 0.95rem;
     margin: 10px 0 30px;
     text-align: center;
   }
+
   .br {
     display: none;
   }
+
   .link {
     margin: 20px 0 30px 0;
     width: 100%;
     display: flex;
     justify-content: center;
   }
+
   .connexion {
     margin-right: 50px;
     font-size: 1rem;
     padding: 15px 20px;
   }
+
   .inscription {
     font-size: 1rem;
     padding: 15px 25px;
   }
+
   .enter {
     font-size: 1rem;
   }
+
   .login,
 .signin {
     height: 100vh;
-    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url("../img/fond/fond-crearteur.webp") rgba(0, 0, 0, 0.8) no-repeat center;
     background-size: cover;
     background-blend-mode: darken;
   }
+
   .search {
     width: 230px;
   }
+
   .card {
     width: 320px;
     margin: 20px;
   }
+
   .card_img {
     height: 280px;
   }
+
   .container {
     display: flex;
     justify-content: center;
     margin-bottom: 65px;
   }
+
   .link_footer {
     font-size: 0.9rem;
     color: #e0e0e0;
@@ -609,15 +657,18 @@ input.form_control:last-child {
     margin: 0px 10px;
     transition: 800ms;
   }
+
   .link_footer:hover {
     transform: scale(1.05);
     transition: 800ms;
   }
+
   .footer {
     display: block;
     background-color: #454545;
     padding: 50px 20px;
   }
+
   .copyright {
     color: #d9d9d9;
     font-size: 0.8rem;
@@ -629,80 +680,85 @@ input.form_control:last-child {
     width: 350px;
     margin: 20px;
   }
+
   .card_img {
     height: 280px;
   }
 }
 @media (min-width: 1000px) {
-  .welcome {
-    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
-    background-size: cover;
-  }
   .title {
     font-size: 3.5rem;
     text-align: center;
   }
+
   .subtitle {
     font-weight: normal;
     font-size: 1rem;
     margin: 10px 0 30px;
     text-align: center;
   }
+
   .br {
     display: none;
   }
+
   .link {
     margin: 20px 0 30px 0;
     width: 100%;
     display: flex;
     justify-content: center;
   }
+
   .connexion {
     margin-right: 50px;
     font-size: 1rem;
     padding: 15px 20px;
   }
+
   .inscription {
     font-size: 1rem;
     padding: 15px 25px;
   }
+
   .enter {
     font-size: 1rem;
   }
-  .login,
-.signin {
-    height: 100vh;
-    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
-    background-size: cover;
-    background-blend-mode: darken;
-  }
+
   .logo2 {
     height: 30px;
   }
+
   .search {
     width: 450px;
   }
+
   .icon {
     height: 60px;
     width: 60px;
   }
+
   .publish {
     font-size: 1rem;
     padding: 10px 30px;
   }
+
   .home {
     padding-top: 80px;
   }
+
   .card {
     width: 400px;
     margin: 20px;
   }
+
   .card_img {
     height: 300px;
   }
+
   .link_footer {
     margin: 0 20px;
   }
+
   .link_footer:hover {
     transform: scale(1.08);
   }
@@ -712,9 +768,11 @@ input.form_control:last-child {
     width: 420px;
     margin: 30px;
   }
+
   .card_img {
     height: 270px;
   }
+
   .link_footer {
     font-size: 1rem;
     margin: 0 25px;
@@ -725,56 +783,54 @@ input.form_control:last-child {
     width: 330px;
     margin: 30px;
   }
+
   .card_img {
     height: 230px;
   }
 }
 @media (min-width: 1700px) {
-  .welcome {
-    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
-    background-size: cover;
-  }
   .title {
     font-size: 5rem;
     text-align: center;
   }
+
   .subtitle {
     font-weight: normal;
     font-size: 1.3rem;
     margin: 10px 0 30px;
     text-align: center;
   }
+
   .br {
     display: none;
   }
+
   .link {
     margin: 20px 0 30px 0;
     width: 100%;
     display: flex;
     justify-content: center;
   }
+
   .connexion {
     margin-right: 50px;
     font-size: 1.1rem;
     padding: 15px 25px;
   }
+
   .inscription {
     font-size: 1.1rem;
     padding: 15px 30px;
   }
+
   .enter {
     font-size: 1.1rem;
   }
-  .login,
-.signin {
-    height: 100vh;
-    background: url("../img/fond/fond-crearteur.jpg") rgba(0, 0, 0, 0.7) no-repeat center;
-    background-size: cover;
-    background-blend-mode: darken;
-  }
+
   .card {
     width: 350px;
   }
+
   .card_img {
     height: 260px;
   }
@@ -784,47 +840,57 @@ input.form_control:last-child {
     font-size: 5.5rem;
     text-align: center;
   }
+
   .subtitle {
     font-weight: normal;
     font-size: 1.5rem;
     margin: 10px 0 30px;
     text-align: center;
   }
+
   .link {
     margin: 20px 0 40px 0;
     width: 100%;
     display: flex;
     justify-content: center;
   }
+
   .connexion {
     margin-right: 50px;
     font-size: 1.1rem;
     padding: 20px 30px;
   }
+
   .inscription {
     font-size: 1.1rem;
     padding: 20px 40px;
   }
+
   .enter {
     font-size: 1.2rem;
   }
+
   .header {
     padding: 35px 60px;
     margin-bottom: 50px;
   }
+
   .search {
     font-size: 1.1rem;
     padding: 8px 2rem;
   }
+
   .fa-magnifying-glass {
     font-size: 1rem;
     left: 10px;
   }
+
   .identification {
     transition: 300ms;
     font-size: 1rem;
     padding: 10px 30px;
   }
+
   .identification:hover {
     color: #fff;
     background-color: #00a3ff;
@@ -832,16 +898,20 @@ input.form_control:last-child {
     transform: scale(1.1);
     box-shadow: none;
   }
+
   .card {
     width: 380px;
     margin: 35px;
   }
+
   .card_img {
     height: 280px;
   }
+
   .createur {
     font-size: 1.1rem;
   }
+
   .link_footer {
     font-size: 1.1rem;
     margin: 0 35px;
@@ -851,13 +921,13 @@ input.form_control:last-child {
   .card {
     width: 430px;
   }
+
   .link_footer {
     font-size: 1.2rem;
     margin: 0 40px;
   }
+
   .copyright {
     font-size: 1rem;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

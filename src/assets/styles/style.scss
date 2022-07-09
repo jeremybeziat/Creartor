@@ -43,7 +43,7 @@ p {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url($fond-phone) rgba(0, 0, 0, 0.7) no-repeat center;
+  background: url($fond-phone) rgba(0, 0, 0, 0.8) no-repeat center;
   background-size: cover;
   background-blend-mode: darken;
 }
@@ -91,7 +91,7 @@ p {
   font-weight: normal;
   font-family: $title;
   color: $text;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .login,
@@ -429,7 +429,7 @@ input.form_control:last-child {
 
 @media (min-width: 560px) {
   .welcome {
-    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url($fond) rgba(0, 0, 0, 0.8) no-repeat center;
     background-size: cover;
   }
 
@@ -629,7 +629,7 @@ input.form_control:last-child {
 
 @media (min-width: 768px) {
   .welcome {
-    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url($fond) rgba(0, 0, 0, 0.8) no-repeat center;
     background-size: cover;
   }
 
@@ -674,7 +674,7 @@ input.form_control:last-child {
   .login,
   .signin {
     height: 100vh;
-    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
+    background: url($fond) rgba(0, 0, 0, 0.8) no-repeat center;
     background-size: cover;
     background-blend-mode: darken;
   }
@@ -744,10 +744,6 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 1000px) {
-  .welcome {
-    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
-    background-size: cover;
-  }
 
   .title {
     font-size: 3.5rem;
@@ -785,14 +781,6 @@ input.form_control:last-child {
 
   .enter {
     font-size: 1rem;
-  }
-
-  .login,
-  .signin {
-    height: 100vh;
-    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
-    background-size: cover;
-    background-blend-mode: darken;
   }
 
   .logo2 {
@@ -875,10 +863,6 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 1700px) {
-  .welcome {
-    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
-    background-size: cover;
-  }
 
   .title {
     font-size: 5rem;
@@ -916,14 +900,6 @@ input.form_control:last-child {
 
   .enter {
     font-size: 1.1rem;
-  }
-
-  .login,
-  .signin {
-    height: 100vh;
-    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
-    background-size: cover;
-    background-blend-mode: darken;
   }
 
   .card {
