@@ -1,6 +1,6 @@
 import React from "react";
 import NavigationCreator from "./Navigationcreator";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Icon from "../assets/img/icon.png";
 import { useState } from "react";
 
@@ -25,11 +25,11 @@ function HeaderCreator() {
     }, TIMEOUT_DELAY);
   });
 
-  const shadowStyle = shouldShowShadow ? 'shadow' : '';
-  const hiddenStyle = shouldHideHeader ? 'hidden' : '';
+  const shadowStyle = shouldShowShadow ? "shadow" : "";
+  const hiddenStyle = shouldHideHeader ? "hidden" : "";
 
   return (
-    <header className= {`header ${shadowStyle} ${hiddenStyle}`}>
+    <header className={`header ${shadowStyle} ${hiddenStyle}`}>
       <NavigationCreator />
       <form action="formulaire">
         <div className="nav">
