@@ -295,10 +295,10 @@ input.form_control:last-child {
 }
 
 .card {
-  margin-bottom: 45px;
+  margin-bottom: 60px;
   display: flex;
   position: relative;
-  width: 280px;
+  width: 300px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -308,7 +308,7 @@ input.form_control:last-child {
   object-fit: cover;
   object-position: center 50%;
   width: 100%;
-  height: 210px;
+  height: 250px;
   border-radius: 10px;
 }
 
@@ -376,6 +376,10 @@ input.form_control:last-child {
 
   .connexion {
     margin-right: 40px;
+  }
+
+  .createur {
+    font-size: 1.1rem;
   }
 
   .avatar_card {
