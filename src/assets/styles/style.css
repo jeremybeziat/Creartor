@@ -385,6 +385,14 @@ input.form_control:last-child {
     height: 320px;
   }
 }
+@media (min-width: 480px) {
+  .card {
+    width: 380px;
+  }
+  .card_img {
+    height: 350px;
+  }
+}
 @media (min-width: 500px) {
   .card {
     width: 400px;
