@@ -206,15 +206,22 @@ input.form_control:last-child {
 // ######################################
 
 .header {
+  position: fixed;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
   background-color: rgba(39, 39, 39, 0.95);
   backdrop-filter: blur(4px);
-  top: 0px;
+  top: 0;
   z-index: 1000;
   width: 100%;
   padding: 25px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.header.hidden {
+  transform: translateY(-110%);
 }
 
 .animation {

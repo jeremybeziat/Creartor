@@ -1,37 +1,35 @@
 import React from "react";
 import Navigation from "./Navigation";
-import {Link} from "react-router-dom";
-import { useState, useCallback, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
+import useDocumentScrollThrottled from "../services/useDocumentScrollThrottled";
 
 function Header() {
-  const [position, setPosition] = useState("sticky");
-  const [animation, setAnimation] = useState("header animation");
-  const [y, setY] = useState(window.scrollY);
-  const handleNavigation = useCallback(
-    (e) => {
-      const window = e.currentTarget;
-      if (y > window.scrollY) {
-        setPosition("sticky");
-        setAnimation("animation header");
-      } else if (y < window.scrollY) {
-        setPosition("absolute");
-        setAnimation("header");
-      }
-      setY(window.scrollY);
-    },
-    [y]
-  );
+  const [shouldHideHeader, setShouldHideHeader] = useState(false);
+  const [shouldShowShadow, setShouldShowShadow] = useState(false);
 
-  useEffect(() => {
-    setY(window.scrollY);
-    window.addEventListener("scroll", handleNavigation);
-    return () => {
-      window.removeEventListener("scroll", handleNavigation);
-    };
-  }, [handleNavigation]);
+  const MINIMUM_SCROLL = 20;
+  const TIMEOUT_DELAY = 50;
+
+  useDocumentScrollThrottled((callbackData) => {
+    const { previousScrollTop, currentScrollTop } = callbackData;
+    const isScrolledDown = previousScrollTop < currentScrollTop;
+    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
+
+    setShouldShowShadow(currentScrollTop > 2);
+
+    setTimeout(() => {
+      setShouldHideHeader(isScrolledDown && isMinimumScrolled);
+    }, TIMEOUT_DELAY);
+  });
+
+  const shadowStyle = shouldShowShadow ? 'shadow' : '';
+  const hiddenStyle = shouldHideHeader ? 'hidden' : '';
+
 
   return (
-    <header className={animation} style={{ position: position }}>
+    <header className={`header ${shadowStyle} ${hiddenStyle}`}>
       <Navigation />
       <form action="formulaire">
         <div className="nav">
