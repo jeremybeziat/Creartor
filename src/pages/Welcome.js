@@ -11,7 +11,7 @@ function Welcome() {
       </h2>
       <div className="link">
         <Link className="connexion" to="/connexion">
-          Se connecter
+          S'identifier
         </Link>
         <Link className="inscription" to="/inscription">
           S'inscrire
