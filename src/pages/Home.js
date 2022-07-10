@@ -8,9 +8,9 @@ import Footer from "../components/Footer";
 function Home() {
   const [unsplash, setUnsplash] = useState([
     {
-      url: "element.urls.full",
+      url: "element.urls.regular",
       username: "element.user.username",
-      pic: "element.user.profile_image.small",
+      pic: "element.user.profile_image.full",
     },
   ]);
   const [renderHtml, setRenderHtml] = useState(
@@ -29,9 +29,9 @@ function Home() {
 
         array.forEach((element) => {
           response.push({
-            url: element.urls.small,
+            url: element.urls.regular,
             username: element.user.username,
-            pic: element.user.profile_image.medium,
+            pic: element.user.profile_image.large,
           });
         });
         setUnsplash(response);
