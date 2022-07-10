@@ -49,13 +49,13 @@ p {
 }
 
 .title {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 
 .subtitle {
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin: 10px 0;
   text-align: center;
 }
@@ -68,27 +68,27 @@ p {
 }
 
 .connexion {
-  font-size: 14px;
-  font-family: $title;
-  border-radius: 10px;
-  padding: 15px 25px;
   background-color: $button;
   color: #fff;
+}
+
+.connexion,
+.inscription {
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: $font;
+  border-radius: 10px;
+  padding: 14px 25px;
   text-decoration: none;
 }
 
 .inscription {
-  font-size: 14px;
-  font-family: $title;
-  border-radius: 10px;
-  padding: 15px 35px;
-  box-shadow: 0px 0px 0px 2px $text inset;
-  color: $text;
-  text-decoration: none;
+  background-color: $text;
+  color: $background;
 }
 
 .enter {
-  font-weight: normal;
   font-family: $title;
   color: $text;
   text-decoration: none;
@@ -434,37 +434,25 @@ input.form_control:last-child {
   }
 
   .title {
-    font-size: 2.4rem;
-    text-align: center;
+    font-size: 2.8rem;
+  }
+
+  .br {
+    display: none;
   }
 
   .subtitle {
-    font-weight: normal;
-    font-size: 1.2rem;
+    font-size: 0.85rem;
     margin: 10px 0 30px;
-    text-align: center;
-  }
-
-  .link {
-    margin: 10px 0 30px 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
   }
 
   .connexion {
     margin-right: 50px;
-    font-size: 1rem;
-    padding: 15px 20px;
   }
 
-  .inscription {
-    font-size: 1rem;
-    padding: 15px 25px;
-  }
-
-  .enter {
-    font-size: 1rem;
+  .link {
+    margin: 10px 0 50px 0;
+    justify-content: center;
   }
 
   .login,
@@ -561,6 +549,15 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 600px) {
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem
+  }
+
   .btn_connection,
   .btn_inscription {
     transition: 800ms;
@@ -570,11 +567,6 @@ input.form_control:last-child {
   .btn_inscription:hover {
     transform: scale(1.05);
     transition: 800ms;
-  }
-
-  .title {
-    font-size: 2.6rem;
-    text-align: center;
   }
 
   .logo2 {
@@ -613,6 +605,14 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 740px) {
+  .title {
+    font-size: 3.3rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
   .card {
     width: 300px;
     margin: 20px;
@@ -628,47 +628,28 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 768px) {
-  .welcome {
-    background: url($fond) rgba(0, 0, 0, 0.8) no-repeat center;
-    background-size: cover;
-  }
 
   .title {
-    font-size: 3.2rem;
+    font-size: 3.6rem;
     text-align: center;
   }
 
   .subtitle {
-    font-weight: normal;
-    font-size: 0.95rem;
+    font-size: medium;
     margin: 10px 0 30px;
-    text-align: center;
-  }
-
-  .br {
-    display: none;
   }
 
   .link {
-    margin: 20px 0 30px 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    margin: 10px 0 50px 0;
   }
 
   .connexion {
     margin-right: 50px;
-    font-size: 1rem;
     padding: 15px 20px;
   }
 
   .inscription {
-    font-size: 1rem;
     padding: 15px 25px;
-  }
-
-  .enter {
-    font-size: 1rem;
   }
 
   .login,
@@ -691,10 +672,6 @@ input.form_control:last-child {
   .card_img {
     height: 280px;
   }
-
-  // .card_figcaption {
-  //   font-size: 0.9rem;
-  // }
 
   .container {
     display: flex;
@@ -744,43 +721,37 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 1000px) {
-
   .title {
-    font-size: 3.5rem;
-    text-align: center;
+    font-size: 3.7rem;
   }
 
   .subtitle {
-    font-weight: normal;
-    font-size: 1rem;
     margin: 10px 0 30px;
-    text-align: center;
-  }
-
-  .br {
-    display: none;
-  }
-
-  .link {
-    margin: 20px 0 30px 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
   }
 
   .connexion {
-    margin-right: 50px;
-    font-size: 1rem;
-    padding: 15px 20px;
+    margin-right: 70px;
   }
 
+  .connexion,
   .inscription {
-    font-size: 1rem;
-    padding: 15px 25px;
+    transition: 300ms;
+  }
+
+  .connexion:hover,
+  .inscription:hover {
+    transform: scale(1.1);
+    transition: 500ms;
   }
 
   .enter {
     font-size: 1rem;
+    transition: 300ms;
+  }
+
+  .enter:hover {
+    transform: scale(1.1);
+    transition: 500ms;
   }
 
   .logo2 {
@@ -863,7 +834,6 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 1700px) {
-
   .title {
     font-size: 5rem;
     text-align: center;
@@ -887,17 +857,6 @@ input.form_control:last-child {
     justify-content: center;
   }
 
-  .connexion {
-    margin-right: 50px;
-    font-size: 1.1rem;
-    padding: 15px 25px;
-  }
-
-  .inscription {
-    font-size: 1.1rem;
-    padding: 15px 30px;
-  }
-
   .enter {
     font-size: 1.1rem;
   }
@@ -917,32 +876,25 @@ input.form_control:last-child {
 @media (min-width: 1900px) {
   .title {
     font-size: 5.5rem;
-    text-align: center;
   }
 
   .subtitle {
-    font-weight: normal;
     font-size: 1.5rem;
     margin: 10px 0 30px;
-    text-align: center;
   }
 
   .link {
-    margin: 20px 0 40px 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    margin: 20px 0 50px 0;
   }
 
   .connexion {
-    margin-right: 50px;
-    font-size: 1.1rem;
-    padding: 20px 30px;
+    margin-right: 70px;
   }
 
+  .connexion,
   .inscription {
-    font-size: 1.1rem;
-    padding: 20px 40px;
+    font-size: 1.05rem;
+    padding: 16px 32px;
   }
 
   .enter {
