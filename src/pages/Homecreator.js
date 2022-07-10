@@ -7,10 +7,9 @@ import { tronquer } from "../services/global.js";
 function Home() {
   const [unsplash, setUnsplash] = useState([
     {
-      alt: "element.alt_description",
-      url: "element.urls.full",
+      url: "element.urls.regular",
       username: "element.user.username",
-      pic: "element.user.profile_image.small",
+      pic: "element.user.profile_image.full",
     },
   ]);
   const [renderHtml, setRenderHtml] = useState(
@@ -29,10 +28,9 @@ function Home() {
 
         array.forEach((element) => {
           response.push({
-            alt: element.alt_description,
-            url: element.urls.small,
+            url: element.urls.regular,
             username: element.user.username,
-            pic: element.user.profile_image.small,
+            pic: element.user.profile_image.full,
           });
         });
         setUnsplash(response);
