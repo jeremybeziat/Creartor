@@ -33,7 +33,7 @@ function Home() {
             alt: element.alt_description,
             url: element.urls.small,
             username: element.user.username,
-            pic: element.user.profile_image.small,
+            pic: element.user.profile_image.medium,
           });
         });
         setUnsplash(response);

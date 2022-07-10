@@ -215,35 +215,14 @@ input.form_control:last-child {
   z-index: 1000;
   width: 100%;
   padding: 25px 20px;
+  margin-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .header.hidden {
-  transform: translateY(-110%);
-}
-
-.animation {
-  -webkit-animation: fadeIn 0.5s;
-  animation: fadeIn 0.5s;
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  transform: translateY(-100%);
 }
 
 .search {
@@ -312,7 +291,7 @@ input.form_control:last-child {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 50px 0px 50px 0;
+  padding: 150px 0px 50px 0;
 }
 
 .card {
@@ -340,10 +319,10 @@ input.form_control:last-child {
   padding: 10px 10px;
   color: $text;
   bottom: 0;
-  background-color: #2d2d2da8;
+  background-color: #2d2d2dd5;
   backdrop-filter: blur(2px);
   width: 100%;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 7px 7px;
 }
 
 .avatar_card {
@@ -387,8 +366,6 @@ input.form_control:last-child {
     font-size: 2.2rem;
   }
 
-
-
   .link {
     justify-content: center;
   }
@@ -423,13 +400,13 @@ input.form_control:last-child {
 // ########## 450 ############
 // ###########################
 
-@media (min-width: 480px) {
+@media (min-width: 450px) {
   .card {
     width: 380px;
   }
 
   .card_img {
-    height: 260px;
+    height: 280px;
   }
 }
 
@@ -624,11 +601,40 @@ input.form_control:last-child {
     height: 300px;
   }
 }
+
 // ###########################
-// ########## 740 ############
+// ########## 650 ############
 // ###########################
 
-@media (min-width: 740px) {
+@media (min-width: 650px) {
+
+  .card {
+    width: 510px;
+    margin: 30px 0;
+  }
+
+  .card_img {
+    height: 350px;
+  }
+}
+
+// ###########################
+// ########## 700 ############
+// ###########################
+
+@media (min-width: 700px) {
+
+  .card {
+    width: 550px;
+  }
+}
+
+
+// ###########################
+// ########## 750 ############
+// ###########################
+
+@media (min-width: 750px) {
   .title {
     font-size: 3.3rem;
   }
@@ -638,12 +644,11 @@ input.form_control:last-child {
   }
 
   .card {
-    width: 300px;
-    margin: 20px;
+    width: 600px;
   }
 
   .card_img {
-    height: 280px;
+    height: 400px;
   }
 }
 
@@ -689,12 +694,11 @@ input.form_control:last-child {
   }
 
   .card {
-    width: 320px;
-    margin: 20px;
+    width: 620px;
   }
 
   .card_img {
-    height: 280px;
+    height: 400px;
   }
 
   .container {
@@ -797,16 +801,22 @@ input.form_control:last-child {
   }
 
   .home {
-    padding-top: 80px;
+    margin-top: 50px;
   }
 
   .card {
-    width: 400px;
+    width: 420px;
     margin: 20px;
   }
 
   .card_img {
     height: 300px;
+  }
+
+  .avatar_card {
+    margin-left: 5px;
+    height: 40px;
+    width: 40px;
   }
 
   .link_footer {
@@ -824,17 +834,64 @@ input.form_control:last-child {
 
 @media (min-width: 1200px) {
   .card {
-    width: 420px;
-    margin: 30px;
+    width: 500px;
   }
 
   .card_img {
-    height: 270px;
+    height: 320px;
   }
 
   .link_footer {
     font-size: 1rem;
     margin: 0 25px;
+  }
+}
+
+// ###########################
+// ########## 1300 ###########
+// ###########################
+
+@media (min-width: 1300px) {
+  .card {
+    width: 550px;
+    margin: 30px;
+  }
+
+  .card_img {
+    height: 350px;
+  }
+}
+
+// ###########################
+// ########## 1400 ###########
+// ###########################
+
+@media (min-width: 1400px) {
+  .card {
+    width: 580px;
+    margin: 30px;
+  }
+
+  .card_img {
+    height: 370px;
+  }
+}
+// ###########################
+// ########## 1500 ###########
+// ###########################
+
+@media (min-width: 1500px) {
+  .card {
+    width: 580px;
+    margin: 30px;
+  }
+
+  .card_img {
+    height: 370px;
+  }
+
+  .createur {
+    font-size: 1.1rem;
   }
 }
 
@@ -955,11 +1012,11 @@ input.form_control:last-child {
   }
 
   .card {
-    width: 380px;
-    margin: 35px;
+    width: 400px;
+    margin: 30px;
   }
   .card_img {
-    height: 280px;
+    height: 300px;
   }
 
   .createur {
@@ -974,7 +1031,11 @@ input.form_control:last-child {
 
 @media (min-width: 2100px) {
   .card {
-    width: 430px;
+    width: 450px;
+  }
+
+  .card_img {
+    height: 300px;
   }
 
   .link_footer {
