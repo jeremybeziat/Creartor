@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Welcome from "./pages/Welcome";
-import HomeCreator from "./pages/Homecreator"
+import HomeCreator from "./pages/HomeCreator"
 import Publish from "./pages/Publish";
 import Connexion from "./pages/Login";
 import Inscription from "./pages/Signin";
