@@ -24,9 +24,8 @@ function Header() {
     }, TIMEOUT_DELAY);
   });
 
-  const shadowStyle = shouldShowShadow ? 'shadow' : '';
-  const hiddenStyle = shouldHideHeader ? 'hidden' : '';
-
+  const shadowStyle = shouldShowShadow ? "shadow" : "";
+  const hiddenStyle = shouldHideHeader ? "hidden" : "";
 
   return (
     <header className={`header ${shadowStyle} ${hiddenStyle}`}>

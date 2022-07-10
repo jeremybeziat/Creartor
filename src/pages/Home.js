@@ -8,7 +8,6 @@ import Footer from "../components/Footer";
 function Home() {
   const [unsplash, setUnsplash] = useState([
     {
-      alt : "element.alt_description",
       url: "element.urls.full",
       username: "element.user.username",
       pic: "element.user.profile_image.small",
@@ -30,7 +29,6 @@ function Home() {
 
         array.forEach((element) => {
           response.push({
-            alt: element.alt_description,
             url: element.urls.small,
             username: element.user.username,
             pic: element.user.profile_image.medium,
@@ -42,7 +40,7 @@ function Home() {
       }
     }
     fetchData(
-      "https://api.unsplash.com/search/photos?order_by=relevant&query=Art&client_id=NtPmUNSwcDiBLX0gnKItq8QDRjnbOamSfTMqK1E-CYE&per_page=28"
+      "https://api.unsplash.com/search/photos?order_by=latest&query=Art&client_id=NtPmUNSwcDiBLX0gnKItq8QDRjnbOamSfTMqK1E-CYE&per_page=28"
     );
 
   }, []);
