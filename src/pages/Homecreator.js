@@ -15,7 +15,7 @@ function Home() {
   ]);
   const [renderHtml, setRenderHtml] = useState(
     <div>
-      <p>image en cours de chargement</p>
+      <p>image en cours de chargement !</p>
     </div>
   );
   useEffect(() => {
