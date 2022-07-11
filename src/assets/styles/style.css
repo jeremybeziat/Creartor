@@ -54,6 +54,7 @@ p {
   background: url("../img/fond/fond-crearteur-phone.webp") rgba(0, 0, 0, 0.8) no-repeat center;
   background-size: cover;
   background-blend-mode: darken;
+  overflow: hidden;
 }
 
 .title {
@@ -76,8 +77,9 @@ p {
 }
 
 .connexion {
+  font-weight: normal;
   background-color: #00a3ff;
-  color: #fff;
+  color: #000;
   margin-right: 30px;
 }
 
