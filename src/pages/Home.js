@@ -40,7 +40,7 @@ function Home() {
       }
     }
     fetchData(
-      "https://api.unsplash.com/search/photos?order_by=latest&query=Art&client_id=NtPmUNSwcDiBLX0gnKItq8QDRjnbOamSfTMqK1E-CYE&per_page=28"
+      "https://api.unsplash.com/search/photos?order_by=latest&query=Art&client_id=NtPmUNSwcDiBLX0gnKItq8QDRjnbOamSfTMqK1E-CYE&per_page=30"
     );
 
   }, []);
