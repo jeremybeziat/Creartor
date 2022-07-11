@@ -357,7 +357,14 @@ input.form_control:last-child {
   .title {
     letter-spacing: 1.1px;
     font-weight: 200;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .connexion,
+.inscription {
+    padding: 16px 30px;
   }
   .link {
     justify-content: center;
@@ -381,6 +388,16 @@ input.form_control:last-child {
   }
 }
 @media (min-width: 450px) {
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  .connexion,
+.inscription {
+    padding: 16px 32px;
+  }
   .card {
     width: 350px;
   }
