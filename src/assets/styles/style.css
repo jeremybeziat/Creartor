@@ -72,28 +72,28 @@ p {
   margin: 20px 0 30px 0;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .connexion {
   background-color: #00a3ff;
   color: #fff;
+  margin-right: 30px;
 }
 
 .connexion,
 .inscription {
+  font-size: 0.8rem;
   letter-spacing: 0.8px;
-  font-weight: 600;
-  font-size: 14px;
-  font-family: "Roboto-Regular", sans-serif;
+  font-family: "Roboto-Medium", sans-serif;
   border-radius: 10px;
-  padding: 14px 25px;
+  padding: 12px 20px;
   text-decoration: none;
 }
 
 .inscription {
-  background-color: #e0e0e0;
-  color: #272727;
+  box-shadow: 0px 0px 0px 2px #e0e0e0 inset;
+  color: #fff;
 }
 
 .enter {
@@ -651,8 +651,17 @@ input.form_control:last-child {
   }
   .connexion:hover,
 .inscription:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 500ms;
+  }
+  .connexion:hover {
+    color: #fff;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px 2px #fff inset;
+  }
+  .inscription:hover {
+    background-color: #00a3ff;
+    box-shadow: none;
   }
   .enter {
     font-size: 1rem;
@@ -690,6 +699,9 @@ input.form_control:last-child {
     margin-left: 5px;
     height: 40px;
     width: 40px;
+  }
+  .createur {
+    font-size: 1.1rem;
   }
   .link_footer {
     margin: 0 20px;
@@ -742,11 +754,11 @@ input.form_control:last-child {
 }
 @media (min-width: 1600px) {
   .card {
-    width: 330px;
+    width: 450px;
     margin: 30px;
   }
   .card_img {
-    height: 230px;
+    height: 300px;
   }
 }
 @media (min-width: 1700px) {
@@ -773,10 +785,10 @@ input.form_control:last-child {
     font-size: 1.1rem;
   }
   .card {
-    width: 350px;
+    width: 480px;
   }
   .card_img {
-    height: 260px;
+    height: 320px;
   }
 }
 @media (min-width: 1900px) {
@@ -826,14 +838,11 @@ input.form_control:last-child {
     box-shadow: none;
   }
   .card {
-    width: 400px;
-    margin: 30px;
+    width: 540px;
+    margin: 35px;
   }
   .card_img {
-    height: 300px;
-  }
-  .createur {
-    font-size: 1.1rem;
+    height: 350px;
   }
   .link_footer {
     font-size: 1.1rem;
@@ -842,10 +851,10 @@ input.form_control:last-child {
 }
 @media (min-width: 2100px) {
   .card {
-    width: 450px;
+    width: 600px;
   }
   .card_img {
-    height: 300px;
+    height: 380px;
   }
   .link_footer {
     font-size: 1.2rem;
