@@ -86,7 +86,7 @@ p {
 .connexion,
 .inscription {
   font-size: 0.8rem;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
   font-family: "Roboto-Medium", sans-serif;
   border-radius: 10px;
   padding: 12px 20px;
@@ -281,15 +281,11 @@ input.form_control:last-child {
   z-index: 999;
 }
 
-.footer {
-  display: none;
-}
-
 .home {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 150px 0px 50px 0;
+  padding: 150px 0px 30px 0;
 }
 
 .card {
@@ -302,7 +298,7 @@ input.form_control:last-child {
 }
 
 .card_img {
-  box-shadow: 0px 0px 15px 0px rgba(23, 23, 23, 0.4901960784);
+  box-shadow: 0px 0px 15px 0px rgba(23, 23, 23, 0.7450980392);
   object-fit: cover;
   object-position: center 50%;
   width: 100%;
@@ -350,6 +346,32 @@ input.form_control:last-child {
   padding: 8px 15px;
   box-shadow: 0px 0px 0px 1.5px #e0e0e0 inset;
   border-radius: 5px;
+}
+
+.link_footer {
+  font-size: 1rem;
+  color: #e0e0e0;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.footer {
+  background-color: #454545;
+  padding: 50px 20px 20px 20px;
+}
+
+.copyright {
+  color: #d9d9d9;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 @media (min-width: 400px) {
@@ -616,30 +638,16 @@ input.form_control:last-child {
     height: 400px;
   }
   .container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 65px;
+    flex-direction: row;
   }
   .link_footer {
     font-size: 0.9rem;
-    color: #e0e0e0;
-    text-decoration: none;
-    margin: 0px 10px;
     transition: 800ms;
+    margin: 10px;
   }
   .link_footer:hover {
     transform: scale(1.05);
     transition: 800ms;
-  }
-  .footer {
-    display: block;
-    background-color: #454545;
-    padding: 50px 20px;
-  }
-  .copyright {
-    color: #d9d9d9;
-    font-size: 0.8rem;
-    text-align: center;
   }
 }
 @media (min-width: 830px) {
@@ -719,6 +727,12 @@ input.form_control:last-child {
   .createur {
     font-size: 1.1rem;
   }
+  .footer {
+    padding: 50px 20px 20px 20px;
+  }
+  .container {
+    margin-bottom: 50px;
+  }
   .link_footer {
     margin: 0 20px;
   }
@@ -755,6 +769,13 @@ input.form_control:last-child {
   .card_img {
     height: 370px;
   }
+  .container {
+    margin-bottom: 50px;
+  }
+  .link_footer {
+    font-size: 1.1rem;
+    margin: 0 30px;
+  }
 }
 @media (min-width: 1500px) {
   .card {
@@ -766,6 +787,16 @@ input.form_control:last-child {
   }
   .createur {
     font-size: 1.1rem;
+  }
+  .container {
+    margin-bottom: 50px;
+  }
+  .link_footer {
+    font-size: 1.2rem;
+    margin: 0 40px;
+  }
+  .copyright {
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 1600px) {
