@@ -11,10 +11,10 @@ function Navigation() {
     <div className="navigation">
       <ul>
         <NavLink onClick={scrollToTop} to="/accueil">
-          <img className="logo" src={logo} alt="" />
+          <img className="logo" src={logo} alt="creartor" />
         </NavLink>
         <NavLink onClick={scrollToTop} to="/accueil">
-          <img className="logo2" src={logo2} alt="" />
+          <img className="logo2" src={logo2} alt="creartor" />
         </NavLink>
       </ul>
     </div>

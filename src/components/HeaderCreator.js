@@ -10,7 +10,7 @@ function HeaderCreator() {
   const [shouldHideHeader, setShouldHideHeader] = useState(false);
   const [shouldShowShadow, setShouldShowShadow] = useState(false);
 
-  const MINIMUM_SCROLL = 20;
+  const MINIMUM_SCROLL = 30;
   const TIMEOUT_DELAY = 50;
 
   useDocumentScrollThrottled((callbackData) => {
