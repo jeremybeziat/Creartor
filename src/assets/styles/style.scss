@@ -69,7 +69,6 @@ p {
 }
 
 .connexion {
-  font-weight: normal;
   background-color: $button;
   color: #000;
   margin-right: 30px;
@@ -154,6 +153,7 @@ p {
 }
 
 .fa-arrow-left:hover {
+  transform: translateX(-5px);
   color: $button;
 }
 
@@ -211,12 +211,12 @@ input.form_control:last-child {
   position: fixed;
   transform: translateY(0);
   transition: transform 0.3s ease;
-  background-color: rgba(39, 39, 39, 0.95);
+  background-color: rgba(0, 0, 0, 0.64);
   backdrop-filter: blur(4px);
   top: 0;
   z-index: 1000;
   width: 100%;
-  padding: 25px 20px;
+  padding: 20px;
   margin-bottom: 50px;
   display: flex;
   align-items: center;
@@ -289,7 +289,7 @@ input.form_control:last-child {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 150px 0px 30px 0;
+  padding: 100px 0px 30px 0;
 }
 
 .card {
@@ -344,6 +344,7 @@ input.form_control:last-child {
 }
 
 .identification {
+  font-family: $subtitle;
   font-size: 12px;
   text-decoration: none;
   color: $text;
@@ -407,10 +408,6 @@ input.form_control:last-child {
     padding: 16px 30px;
   }
 
-  .link {
-    justify-content: center;
-  }
-
   .connexion {
     margin-right: 40px;
   }
@@ -430,7 +427,7 @@ input.form_control:last-child {
   }
 
   .card_img {
-    height: 300px;
+    height: 280px;
   }
 }
 
@@ -448,7 +445,7 @@ input.form_control:last-child {
   }
 
   .card {
-    width: 350px;
+    width: 380px;
   }
 
   .card_img {
@@ -462,7 +459,7 @@ input.form_control:last-child {
 
 @media (min-width: 480px) {
   .card {
-    width: 380px;
+    width: 400px;
   }
 
   .card_img {
@@ -476,11 +473,11 @@ input.form_control:last-child {
 
 @media (min-width: 500px) {
   .card {
-    width: 400px;
+    width: 420px;
   }
 
   .card_img {
-    height: 280px;
+    height: 380px;
   }
 }
 
@@ -521,29 +518,19 @@ input.form_control:last-child {
     height: 100vh;
     background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
     background-size: cover;
-    background-blend-mode: darken;
   }
 
   .login {
     padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .formulaire {
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $formulaire;
     padding: 25px 80px;
   }
 
   .redirection {
     margin-bottom: 30px;
     font-size: 1.1rem;
-    text-align: center;
   }
 
   .return {
@@ -578,20 +565,28 @@ input.form_control:last-child {
   }
 
   .header {
-    padding: 25px 35px;
+    padding: 25px;
   }
 
   .search {
-    width: 200px;
+    width: 250px;
+  }
+
+  .search2 {
+    padding: 8px 1.8rem;
+  }
+
+  .fa-magnifying-glass {
+    left: 10px;
   }
 
   .card {
-    width: 420px;
-    margin: 20px 0;
+    width: 450px;
+    margin-bottom: 30px;
   }
 
   .card_img {
-    height: 300px;
+    height: 350px;
   }
 }
 
@@ -600,6 +595,7 @@ input.form_control:last-child {
 // ###########################
 
 @media (max-width: 599px) {
+
   .logo2 {
     display: none;
   }
@@ -610,6 +606,7 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 600px) {
+
   .title {
     font-size: 3rem;
   }
@@ -630,7 +627,7 @@ input.form_control:last-child {
   }
 
   .logo2 {
-    height: 25px;
+    height: 18px;
   }
 
   .logo {
@@ -638,7 +635,7 @@ input.form_control:last-child {
   }
 
   .search {
-    width: 200px;
+    width: 250px;
   }
 
   .publish {
@@ -681,6 +678,9 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 700px) {
+  .logo2 {
+    height: 20px;
+  }
   .card {
     width: 550px;
   }
@@ -739,17 +739,25 @@ input.form_control:last-child {
   .login,
   .signin {
     height: 100vh;
-    background: url($fond) rgba(0, 0, 0, 0.8) no-repeat center;
+    background: url($fond) rgba(0, 0, 0, 0.7) no-repeat center;
     background-size: cover;
-    background-blend-mode: darken;
+  }
+
+  .header {
+    padding: 30px;
+  }
+
+  .logo2 {
+    height: 22px;
   }
 
   .search {
-    width: 230px;
+    width: 320px;
   }
 
   .card {
-    width: 620px;
+    width: 630px;
+    margin-bottom: 35px;
   }
 
   .card_img {
@@ -811,17 +819,18 @@ input.form_control:last-child {
 
   .connexion:hover,
   .inscription:hover {
-    transform: scale(1.05);
     transition: 500ms;
   }
 
   .connexion:hover {
+    font-weight: normal;
     color: #fff;
     background-color: transparent;
     box-shadow: 0px 0px 0px 2px #fff inset;
   }
 
   .inscription:hover {
+    color: #000;
     background-color: $button;
     box-shadow: none;
   }
@@ -836,12 +845,35 @@ input.form_control:last-child {
     transition: 500ms;
   }
 
+  .header {
+    padding: 30px 35px;
+  }
+
+  @keyframes myAnim {
+    0% {
+      opacity: 0;
+      transform: translateY(-250px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .logo2 {
     height: 30px;
+    transition: 1500ms;
+  }
+
+  .logo2:hover {
+    transform: scale(1.05);
+    transition: 800ms;
   }
 
   .search {
     width: 450px;
+    padding: 8px 1.8rem;
   }
 
   .icon {
@@ -854,17 +886,53 @@ input.form_control:last-child {
     padding: 10px 30px;
   }
 
+  .fa-magnifying-glass {
+    left: 10px;
+  }
+
+  .identification {
+    font-size: 1rem;
+    padding: 12px 25px;
+    transition: 300ms;
+  }
+
+  .identification:hover {
+    background-color: $button;
+    color: #000;
+    transform: scale(1.05);
+    transition: 500ms;
+    box-shadow: none;
+  }
+
   .home {
     margin-top: 50px;
   }
 
+  .card > .card_img {
+    transition: 400ms;
+    inset: 0;
+    height: 320px;
+  }
+
+  .card:hover > .card_img {
+    border-radius: 20px;
+    transition: 800ms;
+    transform: scale(1.1);
+  }
+
   .card {
+    overflow: hidden;
     width: 420px;
-    margin: 20px;
+    margin: 35px 25px;
+    border-radius: 10px;
   }
 
   .card_img {
     height: 300px;
+  }
+
+  .card_figcaption {
+    padding: 15px 10px;
   }
 
   .avatar_card {
@@ -901,6 +969,7 @@ input.form_control:last-child {
 @media (min-width: 1200px) {
   .card {
     width: 500px;
+    margin: 50px 30px;
   }
 
   .card_img {
@@ -920,11 +989,15 @@ input.form_control:last-child {
 @media (min-width: 1300px) {
   .card {
     width: 550px;
-    margin: 30px;
   }
 
   .card_img {
     height: 350px;
+  }
+
+  .avatar_card {
+    height: 55px;
+    width: 55px;
   }
 }
 
@@ -934,12 +1007,11 @@ input.form_control:last-child {
 
 @media (min-width: 1400px) {
   .card {
-    width: 580px;
-    margin: 30px;
+    width: 600px;
   }
 
   .card_img {
-    height: 370px;
+    height: 400px;
   }
 
   .container {
@@ -957,12 +1029,11 @@ input.form_control:last-child {
 
 @media (min-width: 1500px) {
   .card {
-    width: 580px;
-    margin: 30px;
+    width: 650px;
   }
 
   .card_img {
-    height: 370px;
+    height: 400px;
   }
 
   .createur {
@@ -988,9 +1059,52 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 1600px) {
+  .connexion,
+  .inscription {
+    padding: 16px 32px;
+  }
+
+  .title_connexion {
+    font-size: 4rem;
+  }
+
+  .redirection {
+    font-size: 1.3rem;
+  }
+
+  .text_connexion,
+  .password_connexion {
+    font-size: 1.2rem;
+  }
+
+  .formulaire {
+    padding: 50px 120px;
+  }
+
+  .return {
+    left: -80px;
+  }
+
+  input.form_control {
+    font-size: 1rem;
+    padding: 8px;
+    width: 300px;
+  }
+
+  .btn_connection {
+    padding: 16px 32px;
+  }
+
+  .header {
+    padding: 35px 40px;
+  }
+
+  .home {
+    padding-top: 80px;
+  }
+
   .card {
     width: 450px;
-    margin: 30px;
   }
 
   .card_img {
@@ -1015,10 +1129,6 @@ input.form_control:last-child {
     text-align: center;
   }
 
-  .br {
-    display: none;
-  }
-
   .link {
     margin: 20px 0 30px 0;
     width: 100%;
@@ -1034,7 +1144,17 @@ input.form_control:last-child {
     width: 480px;
   }
   .card_img {
-    height: 320px;
+    height: 370px;
+  }
+}
+
+// ###########################
+// ########## 1900 ###########
+// ###########################
+
+@media (min-width: 1800px) {
+  .card {
+    width: 500px;
   }
 }
 
@@ -1071,40 +1191,60 @@ input.form_control:last-child {
   }
 
   .header {
-    padding: 35px 60px;
+    padding: 30px 60px;
     margin-bottom: 50px;
   }
 
   .search {
-    font-size: 1.1rem;
-    padding: 8px 2rem;
+    font-size: 1rem;
+    padding: 7px 2rem;
   }
 
   .fa-magnifying-glass {
-    font-size: 1rem;
+    font-size: 0.9rem;
     left: 10px;
   }
 
   .identification {
-    transition: 300ms;
+    transition: 500ms;
     font-size: 1rem;
     padding: 10px 30px;
   }
 
-  .identification:hover {
-    color: #fff;
-    background-color: $button;
-    transition: 300ms;
-    transform: scale(1.1);
-    box-shadow: none;
+  .home {
+    padding-top: 100px;
+  }
+
+  .avatar_card {
+    height: 45px;
+    width: 45px;
+  }
+
+  .createur {
+    font-size: 1.2rem;
+  }
+
+  .card_figcaption {
+    padding: 10px;
   }
 
   .card {
-    width: 540px;
-    margin: 35px;
+    overflow: hidden;
+    width: 530px;
+    margin: 45px 35px;
+    border-radius: 10px;
   }
-  .card_img {
-    height: 350px;
+
+  .card > .card_img {
+    transition: 400ms;
+    inset: 0;
+    height: 320px;
+  }
+
+  .card:hover > .card_img {
+    border-radius: 20px;
+    transition: 800ms;
+    transform: scale(1.1);
   }
 
   .link_footer {
@@ -1113,21 +1253,21 @@ input.form_control:last-child {
   }
 }
 
-@media (min-width: 2100px) {
-  .card {
-    width: 600px;
-  }
+// @media (min-width: 2100px) {
+//   .card {
+//     width: 300px;
+//   }
 
-  .card_img {
-    height: 380px;
-  }
+//   .card_img {
+//     height: 300px;
+//   }
 
-  .link_footer {
-    font-size: 1.2rem;
-    margin: 0 40px;
-  }
+//   .link_footer {
+//     font-size: 1.2rem;
+//     margin: 0 40px;
+//   }
 
-  .copyright {
-    font-size: 1rem;
-  }
-}
+//   .copyright {
+//     font-size: 1rem;
+//   }
+// }
