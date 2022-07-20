@@ -5,6 +5,7 @@ import CardCreator from "../components/CardCreator";
 import { tronquer } from "../services/global.js";
 
 function Home() {
+  
   const [unsplash, setUnsplash] = useState([
     {
       url: "element.urls.regular",
@@ -14,7 +15,7 @@ function Home() {
   ]);
   const [renderHtml, setRenderHtml] = useState(
     <div>
-      <p>image en cours de chargement !</p>
+      <p>image en cours de chargement</p>
     </div>
   );
   useEffect(() => {
@@ -24,13 +25,13 @@ function Home() {
         const res = await fetch(url);
         let data = await res.json();
         const array = data.results;
-        console.log(data.results);
+        console.log(data.results)
 
         array.forEach((element) => {
           response.push({
             url: element.urls.regular,
             username: element.user.username,
-            pic: element.user.profile_image.full,
+            pic: element.user.profile_image.large,
           });
         });
         setUnsplash(response);
@@ -39,8 +40,9 @@ function Home() {
       }
     }
     fetchData(
-      "https://api.unsplash.com/search/photos?query=Art&client_id=NtPmUNSwcDiBLX0gnKItq8QDRjnbOamSfTMqK1E-CYE&per_page=30"
+      "https://api.unsplash.com/search/photos?order_by=latest&query=Art&client_id=NtPmUNSwcDiBLX0gnKItq8QDRjnbOamSfTMqK1E-CYE&per_page=30"
     );
+
   }, []);
 
   useEffect(() => {
@@ -53,7 +55,7 @@ function Home() {
               alt={unsplash[i].alt}
               src={unsplash[i].url}
               icone={unsplash[i].pic}
-              createur={tronquer(unsplash[i].username, 15, 700)}
+              createur={tronquer(unsplash[i].username, 18, 700)}
             />
           </div>
         );
