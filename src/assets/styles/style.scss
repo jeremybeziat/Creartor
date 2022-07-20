@@ -228,16 +228,12 @@ input.form_control:last-child {
 }
 
 .search {
-  width: 100px;
+  width: 120px;
   background: $input;
   border: $icon solid 1px;
   border-radius: 10px;
   padding: 5px 10px 5px 1.4rem;
   color: $text;
-}
-
-.search2 {
-  width: 160px;
 }
 
 .search:focus-visible {
@@ -246,6 +242,12 @@ input.form_control:last-child {
 
 .search2:focus-visible {
   outline: none;
+}
+
+.navCreator {
+  display: flex;
+  align-items: center;
+  
 }
 
 .publish {
@@ -257,6 +259,7 @@ input.form_control:last-child {
   border-radius: 5px;
   text-decoration: none;
   background-color: $button;
+  margin-right: 20px;
 }
 
 .fa-magnifying-glass {
@@ -264,8 +267,8 @@ input.form_control:last-child {
 }
 
 .icon {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
@@ -314,7 +317,7 @@ input.form_control:last-child {
   position: absolute;
   display: flex;
   align-items: center;
-  padding: 10px 10px;
+  padding: 10px;
   color: $text;
   bottom: 0;
   background-color: #2d2d2daf;
@@ -595,7 +598,6 @@ input.form_control:last-child {
 // ###########################
 
 @media (max-width: 599px) {
-
   .logo2 {
     display: none;
   }
@@ -606,7 +608,6 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 600px) {
-
   .title {
     font-size: 3rem;
   }
@@ -849,18 +850,6 @@ input.form_control:last-child {
     padding: 30px 35px;
   }
 
-  @keyframes myAnim {
-    0% {
-      opacity: 0;
-      transform: translateY(-250px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
   .logo2 {
     height: 30px;
     transition: 1500ms;
@@ -877,8 +866,8 @@ input.form_control:last-child {
   }
 
   .icon {
-    height: 60px;
-    width: 60px;
+    height: 55px;
+    width: 55px;
   }
 
   .publish {
@@ -905,44 +894,45 @@ input.form_control:last-child {
   }
 
   .home {
-    margin-top: 50px;
-  }
-
-  .card > .card_img {
-    transition: 400ms;
-    inset: 0;
-    height: 320px;
-  }
-
-  .card:hover > .card_img {
-    border-radius: 20px;
-    transition: 800ms;
-    transform: scale(1.1);
+    margin-top: 80px;
   }
 
   .card {
     overflow: hidden;
     width: 420px;
-    margin: 35px 25px;
+    margin: 25px 25px;
     border-radius: 10px;
+    transition: 400ms;
+    inset: 0;
+  }
+
+  .card_figcaption {
+    opacity: 0;
   }
 
   .card_img {
     height: 300px;
   }
 
-  .card_figcaption {
-    padding: 15px 10px;
-  }
-
   .avatar_card {
     margin-left: 5px;
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
   }
 
   .createur {
     font-size: 1.1rem;
+  }
+
+  .card:hover > .card_img {
+    border-radius: 20px;
+    transition: 1s;
+    transform: scale(1.1);
+  }
+
+  .card:hover .card_figcaption {
+    opacity: 1;
+    transition: 200ms;
   }
 
   .footer {
@@ -963,10 +953,24 @@ input.form_control:last-child {
 }
 
 // ###########################
+// ########## 1100 ###########
+// ###########################
+
+@media (min-width: 1100px) {
+  .card {
+    width: 460px;
+  }
+}
+
+// ###########################
 // ########## 1200 ###########
 // ###########################
 
 @media (min-width: 1200px) {
+
+  .header {
+    padding: 30px;
+  }
   .card {
     width: 500px;
     margin: 50px 30px;
@@ -996,8 +1000,8 @@ input.form_control:last-child {
   }
 
   .avatar_card {
-    height: 55px;
-    width: 55px;
+    height: 50px;
+    width: 50px;
   }
 }
 
@@ -1096,7 +1100,7 @@ input.form_control:last-child {
   }
 
   .header {
-    padding: 35px 40px;
+    padding: 25px 30px;
   }
 
   .home {
@@ -1104,7 +1108,7 @@ input.form_control:last-child {
   }
 
   .card {
-    width: 450px;
+    width: 460px;
   }
 
   .card_img {
@@ -1140,11 +1144,16 @@ input.form_control:last-child {
     font-size: 1.1rem;
   }
 
+  .avatar_card {
+    height: 40px;
+    width: 40px;
+  }
+
   .card {
-    width: 480px;
+    width: 490px;
   }
   .card_img {
-    height: 370px;
+    height: 350px;
   }
 }
 
@@ -1191,7 +1200,7 @@ input.form_control:last-child {
   }
 
   .header {
-    padding: 30px 60px;
+    padding: 25px 50px;
     margin-bottom: 50px;
   }
 
@@ -1211,6 +1220,10 @@ input.form_control:last-child {
     padding: 10px 30px;
   }
 
+  .publish {
+    margin-right: 50px;
+  }
+
   .home {
     padding-top: 100px;
   }
@@ -1222,10 +1235,6 @@ input.form_control:last-child {
 
   .createur {
     font-size: 1.2rem;
-  }
-
-  .card_figcaption {
-    padding: 10px;
   }
 
   .card {
@@ -1252,22 +1261,3 @@ input.form_control:last-child {
     margin: 0 35px;
   }
 }
-
-// @media (min-width: 2100px) {
-//   .card {
-//     width: 300px;
-//   }
-
-//   .card_img {
-//     height: 300px;
-//   }
-
-//   .link_footer {
-//     font-size: 1.2rem;
-//     margin: 0 40px;
-//   }
-
-//   .copyright {
-//     font-size: 1rem;
-//   }
-// }
