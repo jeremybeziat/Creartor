@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationCreator from "./Navigationcreator";
 import { Link } from "react-router-dom";
-import Icon from "../assets/img/icon.png";
+import Icon from "../assets/img/icon2.png";
 import { useState } from "react";
 
 import useDocumentScrollThrottled from "../services/useDocumentScrollThrottled";
@@ -37,10 +37,12 @@ function HeaderCreator() {
           <input className="search" type="text" />
         </div>
       </form>
+      <div className="navCreator">
       <Link className="publish" to="/publier">
-        Publier
-      </Link>
-      <img className="icon" src={Icon} alt="icon" />
+          Publier
+        </Link>
+        <img className="icon" src={Icon} alt="icon" />
+      </div>
     </header>
   );
 }
