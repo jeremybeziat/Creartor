@@ -229,16 +229,12 @@ input.form_control:last-child {
 }
 
 .search {
-  width: 100px;
+  width: 120px;
   background: rgba(217, 217, 217, 0.062745098);
   border: #d9d9d9 solid 1px;
   border-radius: 10px;
   padding: 5px 10px 5px 1.4rem;
   color: #e0e0e0;
-}
-
-.search2 {
-  width: 160px;
 }
 
 .search:focus-visible {
@@ -247,6 +243,11 @@ input.form_control:last-child {
 
 .search2:focus-visible {
   outline: none;
+}
+
+.navCreator {
+  display: flex;
+  align-items: center;
 }
 
 .publish {
@@ -258,6 +259,7 @@ input.form_control:last-child {
   border-radius: 5px;
   text-decoration: none;
   background-color: #00a3ff;
+  margin-right: 20px;
 }
 
 .fa-magnifying-glass {
@@ -265,8 +267,8 @@ input.form_control:last-child {
 }
 
 .icon {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
@@ -313,7 +315,7 @@ input.form_control:last-child {
   position: absolute;
   display: flex;
   align-items: center;
-  padding: 10px 10px;
+  padding: 10px;
   color: #e0e0e0;
   bottom: 0;
   background-color: rgba(45, 45, 45, 0.6862745098);
@@ -706,26 +708,6 @@ input.form_control:last-child {
   .header {
     padding: 30px 35px;
   }
-  @-webkit-keyframes myAnim {
-    0% {
-      opacity: 0;
-      transform: translateY(-250px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  @keyframes myAnim {
-    0% {
-      opacity: 0;
-      transform: translateY(-250px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
   .logo2 {
     height: 30px;
     transition: 1500ms;
@@ -739,8 +721,8 @@ input.form_control:last-child {
     padding: 8px 1.8rem;
   }
   .icon {
-    height: 60px;
-    width: 60px;
+    height: 55px;
+    width: 55px;
   }
   .publish {
     font-size: 1rem;
@@ -762,37 +744,38 @@ input.form_control:last-child {
     box-shadow: none;
   }
   .home {
-    margin-top: 50px;
-  }
-  .card > .card_img {
-    transition: 400ms;
-    inset: 0;
-    height: 320px;
-  }
-  .card:hover > .card_img {
-    border-radius: 20px;
-    transition: 800ms;
-    transform: scale(1.1);
+    margin-top: 80px;
   }
   .card {
     overflow: hidden;
     width: 420px;
-    margin: 35px 25px;
+    margin: 25px 25px;
     border-radius: 10px;
+    transition: 400ms;
+    inset: 0;
+  }
+  .card_figcaption {
+    opacity: 0;
   }
   .card_img {
     height: 300px;
   }
-  .card_figcaption {
-    padding: 15px 10px;
-  }
   .avatar_card {
     margin-left: 5px;
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
   }
   .createur {
     font-size: 1.1rem;
+  }
+  .card:hover > .card_img {
+    border-radius: 20px;
+    transition: 1s;
+    transform: scale(1.1);
+  }
+  .card:hover .card_figcaption {
+    opacity: 1;
+    transition: 200ms;
   }
   .footer {
     padding: 50px 20px 20px 20px;
@@ -807,7 +790,15 @@ input.form_control:last-child {
     transform: scale(1.08);
   }
 }
+@media (min-width: 1100px) {
+  .card {
+    width: 460px;
+  }
+}
 @media (min-width: 1200px) {
+  .header {
+    padding: 30px;
+  }
   .card {
     width: 500px;
     margin: 50px 30px;
@@ -828,8 +819,8 @@ input.form_control:last-child {
     height: 350px;
   }
   .avatar_card {
-    height: 55px;
-    width: 55px;
+    height: 50px;
+    width: 50px;
   }
 }
 @media (min-width: 1400px) {
@@ -898,13 +889,13 @@ input.form_control:last-child {
     padding: 16px 32px;
   }
   .header {
-    padding: 35px 40px;
+    padding: 25px 30px;
   }
   .home {
     padding-top: 80px;
   }
   .card {
-    width: 450px;
+    width: 460px;
   }
   .card_img {
     height: 300px;
@@ -930,11 +921,15 @@ input.form_control:last-child {
   .enter {
     font-size: 1.1rem;
   }
+  .avatar_card {
+    height: 40px;
+    width: 40px;
+  }
   .card {
-    width: 480px;
+    width: 490px;
   }
   .card_img {
-    height: 370px;
+    height: 350px;
   }
 }
 @media (min-width: 1800px) {
@@ -965,8 +960,7 @@ input.form_control:last-child {
     font-size: 1.2rem;
   }
   .header {
-    padding: 30px 60px;
-    margin-bottom: 50px;
+    padding: 25px 50px;
   }
   .search {
     font-size: 1rem;
@@ -981,6 +975,9 @@ input.form_control:last-child {
     font-size: 1rem;
     padding: 10px 30px;
   }
+  .publish {
+    margin-right: 50px;
+  }
   .home {
     padding-top: 100px;
   }
@@ -991,12 +988,9 @@ input.form_control:last-child {
   .createur {
     font-size: 1.2rem;
   }
-  .card_figcaption {
-    padding: 10px;
-  }
   .card {
     overflow: hidden;
-    width: 530px;
+    width: 540px;
     margin: 45px 35px;
     border-radius: 10px;
   }
