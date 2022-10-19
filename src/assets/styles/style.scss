@@ -6,6 +6,25 @@
   box-sizing: border-box;
 }
 
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+    // background-color: rgb(80, 80, 80);
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #1c1c1c;
+  }
+
 body {
   background-color: $background;
   font-family: $font;
@@ -120,7 +139,7 @@ p {
   flex-direction: column;
   align-items: center;
   background-color: $formulaire;
-  padding: 25px 70px;
+  padding: 25px 50px;
 }
 
 .redirection {
@@ -180,7 +199,7 @@ input.form_control {
   color: $text;
   margin-top: 10px;
   background: $input;
-  border: $input2 solid 1.5px;
+  border: #d9d9d989 solid 1.5px;
   padding: 3px;
   border-radius: 5px;
 }
@@ -247,7 +266,6 @@ input.form_control:last-child {
 .navCreator {
   display: flex;
   align-items: center;
-  
 }
 
 .publish {
@@ -292,14 +310,15 @@ input.form_control:last-child {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 100px 0px 30px 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  gap: 40px;
 }
 
 .card {
-  margin-bottom: 60px;
   display: flex;
   position: relative;
-  width: 300px;
+  width: 320px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -310,7 +329,7 @@ input.form_control:last-child {
   object-position: center 50%;
   width: 100%;
   height: 250px;
-  border-radius: 10px;
+  // border-radius: 5px 5px 7px 7px;
 }
 
 .card_figcaption {
@@ -318,12 +337,11 @@ input.form_control:last-child {
   display: flex;
   align-items: center;
   padding: 10px;
-  color: $text;
+  color: #e0e0e0;
   bottom: 0;
-  background-color: #2d2d2daf;
-  backdrop-filter: blur(4px);
+  background-color: rgb(34 34 34 / 89%);
   width: 100%;
-  border-radius: 0 0 7px 7px;
+  // border-radius: 0 0 5px 5px;
 }
 
 .avatar_card {
@@ -348,7 +366,7 @@ input.form_control:last-child {
 
 .identification {
   font-family: $subtitle;
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
   color: $text;
   padding: 8px 15px;
@@ -426,7 +444,6 @@ input.form_control:last-child {
 
   .card {
     width: 330px;
-    margin: 35px 0;
   }
 
   .card_img {
@@ -585,7 +602,6 @@ input.form_control:last-child {
 
   .card {
     width: 450px;
-    margin-bottom: 30px;
   }
 
   .card_img {
@@ -651,7 +667,6 @@ input.form_control:last-child {
 
   .card {
     width: 470px;
-    margin: 20px 0;
   }
 
   .card_img {
@@ -666,7 +681,6 @@ input.form_control:last-child {
 @media (min-width: 650px) {
   .card {
     width: 510px;
-    margin: 30px 0;
   }
 
   .card_img {
@@ -758,7 +772,6 @@ input.form_control:last-child {
 
   .card {
     width: 630px;
-    margin-bottom: 35px;
   }
 
   .card_img {
@@ -788,7 +801,6 @@ input.form_control:last-child {
 @media (min-width: 830px) {
   .card {
     width: 350px;
-    margin: 20px;
   }
 
   .card_img {
@@ -856,7 +868,7 @@ input.form_control:last-child {
   }
 
   .logo2:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     transition: 800ms;
   }
 
@@ -881,15 +893,14 @@ input.form_control:last-child {
 
   .identification {
     font-size: 1rem;
-    padding: 12px 25px;
-    transition: 300ms;
+    padding: 16px 32px;
+    transition: 200ms;
   }
 
   .identification:hover {
-    background-color: $button;
+    background-color: white;
     color: #000;
-    transform: scale(1.05);
-    transition: 500ms;
+    transition: 200ms;
     box-shadow: none;
   }
 
@@ -900,10 +911,8 @@ input.form_control:last-child {
   .card {
     overflow: hidden;
     width: 420px;
-    margin: 25px 25px;
-    border-radius: 10px;
     transition: 400ms;
-    inset: 0;
+    // border-radius: 5px 5px 7px 7px;
   }
 
   .card_figcaption {
@@ -925,9 +934,9 @@ input.form_control:last-child {
   }
 
   .card:hover > .card_img {
-    border-radius: 20px;
     transition: 1s;
-    transform: scale(1.1);
+    transform: scale(1.03);
+    border-radius: 5px 5px 7px 7px;
   }
 
   .card:hover .card_figcaption {
@@ -967,13 +976,11 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 1200px) {
-
   .header {
     padding: 30px;
   }
   .card {
     width: 500px;
-    margin: 50px 30px;
   }
 
   .card_img {
@@ -1172,6 +1179,10 @@ input.form_control:last-child {
 // ###########################
 
 @media (min-width: 1900px) {
+
+  .home {
+    gap: 60px;
+  }
   .title {
     font-size: 5.5rem;
   }
@@ -1213,12 +1224,6 @@ input.form_control:last-child {
     left: 10px;
   }
 
-  .identification {
-    transition: 500ms;
-    font-size: 1rem;
-    padding: 10px 30px;
-  }
-
   .publish {
     margin-right: 50px;
   }
@@ -1239,8 +1244,6 @@ input.form_control:last-child {
   .card {
     overflow: hidden;
     width: 540px;
-    margin: 45px 35px;
-    border-radius: 10px;
   }
 
   .card > .card_img {
@@ -1250,9 +1253,7 @@ input.form_control:last-child {
   }
 
   .card:hover > .card_img {
-    border-radius: 20px;
     transition: 800ms;
-    transform: scale(1.1);
   }
 
   .link_footer {

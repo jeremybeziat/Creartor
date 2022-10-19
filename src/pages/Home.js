@@ -13,11 +13,13 @@ function Home() {
       pic: "element.user.profile_image.full",
     },
   ]);
+  
   const [renderHtml, setRenderHtml] = useState(
     <div>
       <p>image en cours de chargement</p>
     </div>
   );
+
   useEffect(() => {
     let response = [];
     async function fetchData(url) {

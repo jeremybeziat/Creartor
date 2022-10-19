@@ -6,13 +6,13 @@ function Login() {
     <main className="login">
       <form className="formulaire">
         <h1 className="title_connexion">
-          <Link className="return" to="/">
+          {/* <Link className="return" to="/">
             <i className="fa-solid fa-arrow-left fa-xs"></i>
-          </Link>
+          </Link> */}
           Connexion
         </h1>
         <p className="redirection">
-          Pas encore de compte,{" "}
+          Pas encore de compte,
           <Link className="link_connexion" to="/inscription">
             <span>
               <br />

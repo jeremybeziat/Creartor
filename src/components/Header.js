@@ -2,7 +2,6 @@ import React from "react";
 import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
 import useDocumentScrollThrottled from "../services/useDocumentScrollThrottled";
 
 function Header() {
@@ -30,12 +29,12 @@ function Header() {
   return (
     <header className={`header ${shadowStyle} ${hiddenStyle}`}>
       <Navigation />
-      <form action="formulaire">
+      {/* <form action="formulaire">
         <div className="nav">
           <i className="fa-solid fa-magnifying-glass fa-xs"></i>
           <input className="search2 search" type="text" />
         </div>
-      </form>
+      </form> */}
       <Link className="identification" to="/connexion">
         S'identifier
       </Link>
