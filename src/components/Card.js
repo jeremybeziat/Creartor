@@ -3,7 +3,7 @@ import React from "react";
 const Card = (props) => {
   return (
     <figure className="card">
-      <img className="card_img" src={props.src} alt={props.createur} />
+      <img loading="lazy" className="card_img" src={props.src} alt={props.createur} />
       <figcaption className="card_figcaption">
         <img className="avatar_card" src={props.icone} alt={props.createur} />
         <p className="createur">
